@@ -1,0 +1,99 @@
+nav {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  align-items: center;
+  margin: 2rem 4rem;
+}
+
+nav ul {
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav > ul {
+}
+
+nav > ul a {
+  margin: auto;
+  /* padding: auto; */
+  border-bottom: none;
+  color: #222222;
+}
+
+nav > ul:hover > a {
+  color: rgba(34, 34, 34, 0.3);
+}
+nav > ul:hover > a:hover {
+  color: #222222;
+}
+
+.hero {
+  margin: 2rem 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-buttons {
+  max-width: 75%;
+  margin-top: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.link-buttons a {
+  padding: 3rem 5rem;
+  border: 0.25rem solid black;
+}
+
+main section {
+  display: grid;
+  grid-template-columns: minmax(auto, 0.75fr);
+  justify-content: center;
+  text-align: center;
+}
+
+main section img {
+  width: 50%;
+}
+
+article footer {
+  text-align: right;
+}
+
+article footer h3 {
+  font-style: italic;
+}
+
+body > footer {
+  background-color: #222222;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  padding: 6rem 0;
+}
+
+body > footer a {
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body > footer span {
+  padding: 0 0.5rem;
+}

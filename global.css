@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Work+Sans:ital,wght@0,400;0,450;1,400;1,450&display=swap");
+
+:root {
+  --body-text: "Work Sans";
+  --heading-text: "Baskervville";
+  --foreground-color: #222222;
+  --background-color: white;
+}
+
+* {
+  font-weight: normal;
+  font-family: var(--body-text);
+  color: var(--foreground-color);
+}
+
+strong {
+  font-weight: bold;
+}
+
+main {
+  margin: 2rem 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-text);
+  line-height: 1.1;
+  margin: 1.5rem 0;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.small-caps {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 450;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+
+p {
+  margin: 2.5rem 0;
+}
+
+a {
+  text-decoration-line: none;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.3);
+}
