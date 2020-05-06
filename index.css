@@ -62,7 +62,7 @@ nav > ul:hover > li > a:hover {
 .hero {
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
   grid-template-rows: max-content;
   gap: 2rem;
   align-items: center;
@@ -171,6 +171,16 @@ body > footer span {
 
 /* 1000px or less */
 @media all and (max-width: 1000px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero img {
+    max-height: 50vw;
+    padding: 0 4rem;
+  }
+
   .hamburger {
     cursor: pointer;
     display: inline-block;
