@@ -51,6 +51,10 @@ nav > ul:hover > li > a:hover {
   color: #222222;
 }
 
+.hamburger {
+  display: none;
+}
+
 .hero {
   margin: 2rem 0;
   display: grid;
@@ -126,4 +130,57 @@ body > footer a {
 
 body > footer span {
   padding: 0 0.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  padding: 5rem;
+  transform: translateX(-200%);
+  transition: transform 0.5s ease-out;
+}
+
+.close {
+  color: gray;
+  font-size: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.menu ul {
+  line-height: 2.5;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+/* 1000px or less */
+@media all and (max-width: 1000px) {
+  img {
+    width: 100%;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3rem;
+    border: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav > ul {
+    display: none;
+  }
 }
