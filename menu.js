@@ -3,7 +3,7 @@ const menu = document.querySelector(`.menu`);
 const closeButton = document.querySelector(`.close`);
 
 const toggleMenu = () => {
-  if (hamburger && menu) {
+  if (hamburger && menu && closeButton) {
     menu.classList.toggle(`open`);
   }
   document.querySelector(`body`).classList.toggle(`disable-scroll`);
