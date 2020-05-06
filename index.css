@@ -25,7 +25,7 @@ nav > ul {
 .dropdown > a {
   border: none;
   font-size: 1.25rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 nav > ul > li > a:hover ~ .dropdown {
@@ -54,12 +54,15 @@ nav > ul:hover > li > a:hover {
 .hero {
   margin: 2rem 0;
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-template-rows: max-content;
   gap: 2rem;
   align-items: center;
   text-align: center;
+}
+
+.hero img {
+  /* maxheight: 200px; */
 }
 
 .sidebar {
