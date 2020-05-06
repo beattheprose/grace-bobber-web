@@ -19,10 +19,10 @@ nav > ul {
 
 .dropdown {
   position: absolute;
-  background-color: rgba(24, 24, 24, 0.75);
+  background-color: rgba(30, 30, 30, 0.95);
   color: rgba(255, 255, 255, 0.3);
   padding: 1.5rem;
-  transform: translateY(25%);
+  transform: translateY(10%);
   opacity: 0;
 }
 
@@ -32,7 +32,11 @@ nav > ul {
   padding: 0.5rem 0;
 }
 
-nav > ul > li > a:hover ~ .dropdown {
+.dropdown > a:hover {
+  color: white;
+}
+
+nav > ul > li:hover > a ~ .dropdown {
   display: flex;
   opacity: 1;
   flex-direction: column;
@@ -42,17 +46,12 @@ nav > ul > li > a:hover ~ .dropdown {
 }
 
 nav > ul > li > a {
-  margin: auto;
-  padding: auto;
   border-bottom: none;
   color: #222222;
 }
 
-nav > ul:hover > li > a {
+nav > ul:hover > li:not(:hover) > a {
   color: rgba(34, 34, 34, 0.3);
-}
-nav > ul:hover > li > a:hover {
-  color: #222222;
 }
 
 .hamburger {
@@ -90,7 +89,7 @@ nav > ul:hover > li > a:hover {
 
 .link-buttons a {
   padding: 2rem 3rem;
-  margin: 2rem 3rem;
+  margin: 2rem 2rem;
   border: 0.25rem solid black;
   transition: 0.15s ease-in-out;
 }
@@ -141,12 +140,11 @@ body > footer span {
 .menu {
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
-  z-index: 1;
+  height: 100vh;
   background-color: white;
   padding: 5rem;
   transform: translateX(-200%);
@@ -178,7 +176,7 @@ body > footer span {
 
   .hero img {
     max-height: 50vw;
-    padding: 0 4rem;
+    padding: 0 0 2rem 0;
   }
 
   .hamburger {
