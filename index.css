@@ -65,7 +65,10 @@ article footer h3 {
   }
 
   .hero img {
-    max-height: 75vw;
+    min-width: 75vw;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 50% 40%;
   }
 
   main section img {
