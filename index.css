@@ -1,3 +1,7 @@
+.disable-scroll {
+  overflow: hidden;
+}
+
 nav {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
@@ -142,7 +146,8 @@ body > footer span {
   left: 0;
   width: 100vw;
   height: 100vw;
-  background: white;
+  z-index: 1;
+  background-color: white;
   padding: 5rem;
   transform: translateX(-200%);
   transition: transform 0.5s ease-out;
