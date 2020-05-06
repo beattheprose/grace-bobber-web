@@ -128,7 +128,7 @@ body > footer span {
 
 main section {
   display: grid;
-  grid-template-columns: minmax(0, 72rem);
+  grid-template-columns: minmax(0, 90rem);
   justify-content: center;
 }
 
