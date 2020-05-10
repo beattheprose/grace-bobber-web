@@ -1,13 +1,13 @@
-const hamburger = document.querySelector(`.hamburger`);
-const menu = document.querySelector(`.menu`);
+const siteNav-hamburger = document.querySelector(`.siteNav-hamburger`);
+const swipeOver = document.querySelector(`.swipeOver`);
 const closeButton = document.querySelector(`.close`);
 
-const toggleMenu = () => {
-  if (hamburger && menu && closeButton) {
-    menu.classList.toggle(`open`);
+const toggleswipeOver = () => {
+  if (siteNav-hamburger && swipeOver && closeButton) {
+    swipeOver.classList.toggle(`swipeOver-isOpen`);
   }
   document.querySelector(`body`).classList.toggle(`disable-scroll`);
 };
 
-hamburger.addEventListener(`click`, toggleMenu);
-closeButton.addEventListener(`click`, toggleMenu);
+siteNav-hamburger.addEventListener(`click`, toggleswipeOver);
+closeButton.addEventListener(`click`, toggleswipeOver);

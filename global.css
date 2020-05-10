@@ -7,6 +7,11 @@
   --background-color: white;
 }
 
+.swipeOver,
+.siteNav > ul > li:hover > a ~ .menuList-dropdown {
+  display: flex;
+}
+
 * {
   font-weight: normal;
   font-family: var(--body-text);
@@ -56,6 +61,7 @@ h6 {
   font-size: 1rem;
 }
 
+.menuList-link,
 .small-caps {
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -96,8 +102,7 @@ body > footer span {
   padding: 0 0.5rem;
 }
 
-.menu {
-  display: flex;
+.swipeOver {
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -118,11 +123,11 @@ body > footer span {
   cursor: pointer;
 }
 
-.menu ul {
+.swipeOver ul {
   line-height: 2.5;
 }
 
-.menu.open {
+.swipeOver-isOpen {
   transform: translateX(0);
 }
 
@@ -132,7 +137,7 @@ main section {
   justify-content: center;
 }
 
-nav {
+.siteNav {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   align-items: center;
@@ -142,18 +147,18 @@ nav {
   background: white;
 }
 
-nav * {
+.siteNav * {
   border: none;
 }
 
-nav > ul {
+.siteNav > ul {
   justify-self: center;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.dropdown {
+.menuList-dropdown {
   position: absolute;
   background-color: rgba(30, 30, 30, 0.95);
   color: rgba(255, 255, 255, 0.3);
@@ -162,18 +167,17 @@ nav > ul {
   opacity: 0;
 }
 
-.dropdown > a {
+.menuList-dropdown > a {
   border: none;
   font-size: 1.25rem;
   padding: 0.5rem 0;
 }
 
-.dropdown > a:hover {
+.menuList-dropdown > a:hover {
   color: white;
 }
 
-nav > ul > li:hover > a ~ .dropdown {
-  display: flex;
+.siteNav > ul > li:hover > a ~ .menuList-dropdown {
   opacity: 1;
   flex-direction: column;
   flex: 1;
@@ -181,33 +185,49 @@ nav > ul > li:hover > a ~ .dropdown {
   transition: all 0.3s ease-in;
 }
 
-nav > ul > li > a {
+.siteNav > ul > li > a {
   border-bottom: none;
   color: #222222;
 }
 
-nav > ul:hover > li:not(:hover) > a {
+.siteNav > ul:hover > li:not(:hover) > a {
   color: rgba(34, 34, 34, 0.3);
 }
 
-.hamburger {
+.siteNav-hamburger {
   display: none;
 }
 
+.button {
+  padding: 2rem 3rem;
+  margin: 1.5rem 3rem;
+  border: 0.25rem solid black;
+  transition: 0.15s ease-in-out;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.button:hover {
+  color: white;
+  background-color: #222222;
+}
+
 @media all and (max-width: 1000px) {
-  .hamburger {
+  .siteNav-hamburger {
     cursor: pointer;
     display: inline-block;
     font-size: 3rem;
     border: none;
   }
 
-  nav {
+  .siteNav {
     display: flex;
     justify-content: space-between;
   }
 
-  nav > ul {
+  .siteNav > ul {
     display: none;
   }
 }

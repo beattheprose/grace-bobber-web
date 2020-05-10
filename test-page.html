@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="./test-dist.css" />
   </head>
   <body>
-    <nav>
-      <a href="/"><h3>Grace Bobber</h3></a>
+    <nav class="siteNav">
+      <a class="siteNav-siteTitle" href="/"><h3>Grace Bobber</h3></a>
 
       <ul>
         <li>
@@ -26,7 +26,7 @@
         </li>
         <li>
           <a class="small-caps" href="/test-page.html">Media</a>
-          <div class="dropdown">
+          <div class="menuList-dropdown">
             <a href="/test-page.html" class="small-caps">Photos</a>
             <a href="/test-page.html" class="small-caps">Videos</a>
           </div>
@@ -36,7 +36,7 @@
         </li>
         <li>
           <a class="small-caps" href="/test-page.html">Music</a>
-          <div class="dropdown">
+          <div class="menuList-dropdown">
             <a href="/test-page.html" class="small-caps">Thunk</a>
             <a href="/test-page.html" class="small-caps">The Fisher Cats</a>
           </div>
@@ -46,10 +46,10 @@
         </li>
       </ul>
 
-      <a class="hamburger fa fa-bars"></a>
+      <a class="siteNav-hamburger fa fa-bars"></a>
     </nav>
 
-    <div class="menu">
+    <div class="swipeOver">
       <ul>
         <li>
           <a href="/">Bio</a>
@@ -73,6 +73,8 @@
       <a class="fa fa-close close"></a>
     </div>
 
+    <button class="button">Test</button>
+    <a class="button">Test</a>
     <main>
       <section>
         <h1>A test!</h1>
@@ -124,6 +126,6 @@
       <a href="https://youtube.com/channel/UCrHRRBWgNyX_rMAJCMHqaUQ">youtube</a>
     </footer>
 
-    <script src="/menu-dist.js"></script>
+    <script src="/menu.js"></script>
   </body>
 </html>

@@ -1,3 +1,16 @@
+.hero-linkButtons,
+.signOff p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 450;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+
+.hero-linkButtons {
+  display: flex;
+}
+
 .hero {
   margin: 2rem 0;
   display: grid;
@@ -8,37 +21,24 @@
   text-align: center;
 }
 
-.hero img {
+.hero-heroImage {
   min-height: 100%;
   max-height: 500px;
   justify-self: center;
   object-fit: cover;
 }
 
-.sidebar {
+.hero-heroBody {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.link-buttons {
+.hero-linkButtons {
   margin-top: 3rem;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 600px;
-}
-
-.link-buttons a {
-  padding: 2rem 3rem;
-  margin: 1.5rem 3rem;
-  border: 0.25rem solid black;
-  transition: 0.15s ease-in-out;
-}
-
-div.link-buttons > a:hover {
-  color: white;
-  background-color: #222222;
 }
 
 main section {
@@ -49,11 +49,11 @@ main section img {
   width: 50%;
 }
 
-article footer {
+.signOff {
   text-align: right;
 }
 
-article footer h3 {
+.signOff-signature {
   font-style: italic;
 }
 
