@@ -1,4 +1,4 @@
 node_modules
 *-original.jpg
 dist/*
-news/posts/dist/*
+pages/news/posts/dist/*
