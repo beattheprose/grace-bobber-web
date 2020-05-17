@@ -20,6 +20,7 @@
 
 .pageContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -28,10 +29,7 @@ strong {
 }
 
 main {
-  /* margin: 2rem 4rem; */
-  margin: 0 4rem;
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+  margin: 2rem 4rem;
 }
 
 h1,
