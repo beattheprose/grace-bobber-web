@@ -1,22 +1,11 @@
 .hero {
   margin: 2rem 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  grid-template-rows: max-content;
+  gap: 2rem;
   align-items: center;
-  justify-content: space-evenly;
-  /* text-align: center; */
-}
-
-.hero-linkButtons {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 450;
-  letter-spacing: 0.2rem;
-  text-decoration: none;
-  display: flex;
-  margin-top: 3rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 600px;
+  text-align: center;
 }
 
 .hero-heroImg {
@@ -38,7 +27,7 @@
     margin: auto;
   }
 
-  .hero img {
+  .hero-heroImg {
     min-width: 75vw;
     max-height: 400px;
     object-fit: cover;
