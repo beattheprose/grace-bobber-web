@@ -17,3 +17,4 @@ menuItems.forEach(function (item) {
     swipeOverLinkList.insertAdjacentHTML("beforeend", li);
 });
 var array = ["apples", "oranges", "bananas"];
+console.log(array);

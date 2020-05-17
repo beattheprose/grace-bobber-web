@@ -16,13 +16,11 @@ closeButton.addEventListener(`click`, swipeOverToggle);
 const menuItems = document.querySelectorAll(`.menuList-link`);
 const swipeOverLinkList = document.querySelector(`.swipeOver-linkList`);
 
-interface HTML {
-  innerHTML: string;
-  outerHTML: string;
-}
-menuItems.forEach((item: HTML) => {
+menuItems.forEach((item: { outerHTML: string }) => {
   const li: string = `<li class="swipeOver-link">${item.outerHTML}</li>`;
   swipeOverLinkList.insertAdjacentHTML(`beforeend`, li);
 });
 
-const array = [`apples`, `oranges`, `bananas`];
+const array: string[] = [`apples`, `oranges`, `bananas`];
+
+console.log(array);
