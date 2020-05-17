@@ -132,9 +132,8 @@ body > footer span {
 }
 
 main section {
-  display: grid;
-  grid-template-columns: minmax(0, 90rem);
   justify-content: center;
+  margin: 0 15vw;
 }
 
 .siteNav {
@@ -215,6 +214,10 @@ main section {
 }
 
 @media all and (max-width: 1000px) {
+  main section {
+    margin: 5vw;
+  }
+
   .siteNav-hamburger {
     cursor: pointer;
     display: inline-block;

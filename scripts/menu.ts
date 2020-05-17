@@ -14,7 +14,7 @@ closeButton.addEventListener(`click`, swipeOverToggle);
 
 // Dynamically generate the list of links based on the content
 const menuItems = document.querySelectorAll(`.menuList-link`);
-const swipeOverLinkList = document.querySelector(`.swipeOver-linkList`);
+const swipeOverLinkList = document.querySelector(`.swipeOver-linkList`);i
 
 menuItems.forEach((item: { outerHTML: string }) => {
   const li: string = `<li class="swipeOver-link">${item.outerHTML}</li>`;
