@@ -18,10 +18,11 @@
   color: var(--foreground-color);
 }
 
-.pageContainer {
+body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 strong {
@@ -89,15 +90,11 @@ a {
   overflow: hidden;
 }
 
-.pageContainer {
-  position: relative;
-  min-height: 100vh;
-}
-
 .footer {
   background-color: #222222;
   color: white;
   text-align: center;
+  margin-top: 3rem;
   padding: 6rem 2rem;
 }
 
