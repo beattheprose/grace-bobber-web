@@ -41,11 +41,11 @@
   max-width: 600px;
 }
 
-main section {
+.content-body {
   text-align: center;
 }
 
-main section img {
+.content-body img {
   width: 50%;
 }
 
@@ -71,7 +71,7 @@ main section img {
     object-position: 50% 40%;
   }
 
-  main section img {
+  .content-body img {
     width: 100%;
   }
 

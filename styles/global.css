@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Work+Sans:ital,wght@0,400;0,450;1,400;1,450&display=swap");
 
+/* we can also @import the css from our modules specific css here, and just link to the global scope in each of our html files*/
+
 :root {
   --body-text: "Work Sans";
   --heading-text: "Baskervville";
@@ -29,8 +31,12 @@ strong {
   font-weight: bold;
 }
 
-main {
+.content {
   margin: 2rem 4rem;
+}
+
+.content-body {
+  margin: 0 15vw;
 }
 
 h1,
@@ -139,11 +145,6 @@ a {
   transform: translateX(0);
 }
 
-main section {
-  justify-content: center;
-  margin: 0 15vw;
-}
-
 .siteNav {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
@@ -222,7 +223,7 @@ main section {
 }
 
 @media all and (max-width: 1000px) {
-  main section {
+  .content-body {
     margin: 5vw;
   }
 
