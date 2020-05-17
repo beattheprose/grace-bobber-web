@@ -8,3 +8,4 @@ This is a secret repo for Grace's website ;)
 - [ ] Find a way to push only dist?
 - [ ] Think of a better way to handle news posts
 - [ ] Further modularize CSS
+- [x] Make the footer work properly
