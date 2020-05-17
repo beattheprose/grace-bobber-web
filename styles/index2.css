@@ -14,7 +14,11 @@
   color: white;
   position: fixed;
   width: 100vw;
-  z-index: 10;
+  z-index: 1;
+}
+
+.swipeOver {
+  z-index: 2;
 }
 
 .siteNav > ul {
