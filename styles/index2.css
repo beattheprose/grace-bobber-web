@@ -11,22 +11,21 @@
 
 .siteNav {
   background: transparent;
-  color: white;
   position: fixed;
   width: 100vw;
   z-index: 1;
 }
 
+.siteNav h3 {
+  color: white;
+}
+
+.menuList-link {
+  color: rgba(0, 0, 0, 0);
+}
+
 .swipeOver {
   z-index: 2;
-}
-
-.siteNav > ul {
-  opacity: 0;
-}
-
-.siteNav * {
-  color: white;
 }
 
 .video {

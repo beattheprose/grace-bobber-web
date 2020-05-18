@@ -1,6 +1,7 @@
 const video = document.querySelector(`.video`) as HTMLElement;
 const nav = document.querySelector(`.siteNav`) as HTMLElement;
-const link = document.querySelector(`.menuList-link`) as HTMLElement;
+const link = document.querySelectorAll(`.menuList-link`) as any;
+const titleName = document.querySelector(`.siteNav h3`) as HTMLElement;
 
 const videoBounding = video.getBoundingClientRect();
 const navBounding = nav.getBoundingClientRect();
@@ -11,7 +12,9 @@ const scrollCallbackHandler = () => {
   let alpha =
     1 - (cleanVidHeight - document.documentElement.scrollTop) / cleanVidHeight;
   nav.style.backgroundColor = `rgba(255,255,255,${alpha})`;
-  link.style.color = `rgba(255,255,255,${alpha})`;
+  link.forEach((link) => {
+    link.style.color = `rgba(0,0,0,${alpha})`;
+  });
 };
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
