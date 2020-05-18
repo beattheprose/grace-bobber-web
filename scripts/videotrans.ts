@@ -1,4 +1,4 @@
-const video = document.querySelector(`.video`) as HTMLElement;
+const video = document.querySelector(`.video`) as any;
 const nav = document.querySelector(`.siteNav`) as HTMLElement;
 const link = document.querySelectorAll(`.menuList-link`) as any;
 const titleName = document.querySelector(
@@ -28,5 +28,16 @@ const scrollCallbackHandler = () => {
   }
 };
 
+// Set video element to variable
+let videoStartTime = 0;
+
+video.addEventListener(
+  "loadedmetadata",
+  function() {
+    videoStartTime = 200;
+    this.currentTime = videoStartTime;
+  },
+  false
+);
+
 window.addEventListener(`scroll`, scrollCallbackHandler);
-window.addEventListener(`click`, () => {});
