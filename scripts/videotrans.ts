@@ -21,11 +21,11 @@ const scrollCallbackHandler = () => {
   });
 
   console.log(alpha);
-  const heroWrapper = document.querySelector(`.heroTitle`) as HTMLElement;
+  const heroWrapper = document.querySelector(`.heroWrapper`) as HTMLElement;
   if (alpha > 0) {
-    heroWrapper.classList.add(`heroTitle-disabled`);
+    heroWrapper.classList.add(`heroWrapper-disabled`);
   } else {
-    heroWrapper.classList.remove(`heroTitle-disabled`);
+    heroWrapper.classList.remove(`heroWrapper-disabled`);
   }
 };
 
