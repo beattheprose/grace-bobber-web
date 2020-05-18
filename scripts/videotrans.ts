@@ -19,6 +19,15 @@ const scrollCallbackHandler = () => {
   link.forEach((link) => {
     link.style.color = `rgba(0,0,0,${alpha})`;
   });
+
+  console.log(alpha);
+  const heroWrapper = document.querySelector(`.heroTitle`) as HTMLElement;
+  if (alpha > 0) {
+    heroWrapper.classList.add(`heroTitle-disabled`);
+  } else if (heroWrapper.classList.value.includes(`heroTitle-disabled`)) {
+    heroWrapper.classList.remove(`heroTitle-disabled`);
+  }
 };
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
+window.addEventListener(`click`, () => {});

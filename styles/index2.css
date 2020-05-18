@@ -37,6 +37,33 @@
   z-index: -1;
 }
 
+.heroTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  z-index: 150;
+  transition: all 1s;
+}
+
+.heroTitle-heroName {
+  font-size: 15vw;
+  text-align: center;
+  width: 100%;
+  margin-top: 30vh;
+  color: white;
+  background-color: hsla(0, 0%, 0%, 0.85);
+  font-style: italic;
+}
+
+.heroTitle-disabled {
+  transform: translateY(-150vh);
+}
+
 .hero-linkButtons,
 .signOff p {
   text-transform: uppercase;
