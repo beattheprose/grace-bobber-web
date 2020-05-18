@@ -1,17 +1,15 @@
 const video = document.querySelector(`.video`) as HTMLElement;
 const nav = document.querySelector(`.siteNav`) as HTMLElement;
 const link = document.querySelector(`.menuList-link`) as HTMLElement;
-const content = document.querySelector(`.content`) as HTMLElement;
 
-const bounding = video.getBoundingClientRect();
-const bounding2 = content.getBoundingClientRect();
+const videoBounding = video.getBoundingClientRect();
+const navBounding = nav.getBoundingClientRect();
 
-console.log(bounding2);
+const cleanVidHeight = videoBounding.height - navBounding.height;
 
 const scrollCallbackHandler = () => {
   let alpha =
-    1 -
-    (bounding.height - document.documentElement.scrollTop) / bounding.height;
+    1 - (cleanVidHeight - document.documentElement.scrollTop) / cleanVidHeight;
   nav.style.backgroundColor = `rgba(255,255,255,${alpha})`;
   link.style.color = `rgba(255,255,255,${alpha})`;
 };
