@@ -28,16 +28,4 @@ const scrollCallbackHandler = () => {
   }
 };
 
-// Set video element to variable
-let videoStartTime = 0;
-
-video.addEventListener(
-  "loadedmetadata",
-  function() {
-    videoStartTime = 200;
-    this.currentTime = videoStartTime;
-  },
-  false
-);
-
 window.addEventListener(`scroll`, scrollCallbackHandler);
