@@ -14,8 +14,7 @@ const scrollCallbackHandler = () => {
   let alpha =
     1 - (cleanVidHeight - document.documentElement.scrollTop) / cleanVidHeight;
   nav.style.backgroundColor = `rgba(255,255,255,${alpha})`;
-  titleName.style.color = `rgba(${256 - 256 * alpha},${256 -
-    256 * alpha},${256 - 256 * alpha},1)`;
+  titleName.style.color = `rgba(0,0,0,${alpha})`;
   link.forEach((link) => {
     link.style.color = `rgba(0,0,0,${alpha})`;
   });
