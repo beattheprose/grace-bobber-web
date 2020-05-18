@@ -24,7 +24,7 @@ const scrollCallbackHandler = () => {
   const heroWrapper = document.querySelector(`.heroTitle`) as HTMLElement;
   if (alpha > 0) {
     heroWrapper.classList.add(`heroTitle-disabled`);
-  } else if (heroWrapper.classList.value.includes(`heroTitle-disabled`)) {
+  } else {
     heroWrapper.classList.remove(`heroTitle-disabled`);
   }
 };
