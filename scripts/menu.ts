@@ -20,7 +20,3 @@ menuItems.forEach((item: { outerHTML: string }) => {
   const li: string = `<li class="swipeOver-link">${item.outerHTML}</li>`;
   swipeOverLinkList.insertAdjacentHTML(`beforeend`, li);
 });
-
-const array: string[] = [`apples`, `oranges`, `bananas`];
-
-console.log(array);
