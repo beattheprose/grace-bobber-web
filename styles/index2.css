@@ -52,18 +52,20 @@
 }
 
 .heroWrapperContent {
+  height: 30vmax;
+  margin-bottom: 5vmax;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .heroWrapper-heroName {
-  font-size: 15vw;
+  margin: 0;
+  font-size: 15vmin;
   text-align: center;
   width: 100%;
-  /* margin-top: 30vh; */
   color: white;
-  /* background-color: hsla(0, 0%, 0%, 0.85); */
   text-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.5);
   font-style: italic;
 }
@@ -75,11 +77,11 @@
 .heroWrapper-linkButtons > .heroWrapper-linkButton {
   border: 0.125vw solid white;
   margin: 0 1.5vw;
-  padding: 1vw;
+  padding: 2vmin;
   border-radius: 0.25rem;
   background: hsla(0, 0%, 0%, 0.5);
   color: white;
-  font-size: 4vw;
+  font-size: 3vmin;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
@@ -94,8 +96,8 @@
 }
 
 .heroWrapper-invite {
-  margin-bottom: unset;
-  font-size: 5vw;
+  margin: 0;
+  font-size: 4vmin;
   color: white;
   font-style: italic;
   text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
@@ -104,8 +106,8 @@
 .heroWrapper-arrowDown {
   text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
   color: white;
-  padding-bottom: 10vh;
-  font-size: 5vw;
+  margin-bottom: 5vh;
+  font-size: 4vmin;
 }
 
 .hero-linkButtons,
