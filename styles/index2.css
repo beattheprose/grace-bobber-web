@@ -1,3 +1,115 @@
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  position: relative;
+  /* transform: translateY(100vh); */
+}
+
+.siteNav {
+  background: transparent;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+
+.siteNav h3 {
+  color: rgba(0, 0, 0, 0);
+}
+
+.menuList-link {
+  color: rgba(0, 0, 0, 0);
+}
+
+.swipeOver {
+  z-index: 2;
+}
+
+.video {
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.heroWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 150;
+  transition: all 0.75s ease-in-out;
+}
+
+.heroWrapperContent {
+  height: 30vmax;
+  margin-bottom: 5vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heroWrapper-heroName {
+  margin: 0;
+  font-size: 15vmin;
+  text-align: center;
+  width: 100%;
+  color: white;
+  text-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+.heroWrapper-disabled {
+  transform: translateY(-100vh);
+}
+
+.heroWrapper-linkButtons > .heroWrapper-linkButton {
+  border: 0.125vw solid white;
+  margin: 0 1.5vw;
+  padding: 2vmin;
+  border-radius: 0.25rem;
+  background: hsla(0, 0%, 0%, 0.5);
+  color: white;
+  font-size: 3vmin;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
+  color: hsla(0, 0%, 0%, 1);
+  background-color: hsla(0, 0%, 100%, 0.75);
+  border: 0.125vw solid black;
+  padding: 1.5vw;
+}
+
+.heroWrapper-invite {
+  margin: 0;
+  font-size: 4vmin;
+  color: white;
+  font-style: italic;
+  text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
+}
+
+.heroWrapper-arrowDown {
+  text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
+  color: white;
+  margin-bottom: 5vh;
+  font-size: 4vmin;
+}
+
 .hero-linkButtons,
 .signOff p {
   text-transform: uppercase;
@@ -13,19 +125,17 @@
 
 .hero {
   margin: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
-  grid-template-rows: max-content;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
 .hero-heroImage {
-  min-height: 100%;
-  max-height: 500px;
+  margin: 1.5rem 0;
+  max-width: 35%;
+  border-radius: 50%;
   justify-self: center;
-  object-fit: cover;
 }
 
 .hero-heroBody {
@@ -58,19 +168,6 @@
 }
 
 @media all and (max-width: 1000px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
-
-  .hero img {
-    min-width: 75vw;
-    max-height: 400px;
-    object-fit: cover;
-    object-position: 50% 40%;
-  }
-
   .content-body img {
     width: 100%;
   }

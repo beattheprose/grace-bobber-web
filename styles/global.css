@@ -193,7 +193,7 @@ a {
   transition: all 0.3s ease-in;
 }
 
-.siteNav > ul > li > a {
+.menuList-link {
   border-bottom: none;
   color: #222222;
 }
