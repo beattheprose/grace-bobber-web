@@ -1,0 +1,11 @@
+@import url("/modules/hero/css/hero.css");
+
+.hero {
+  margin-bottom: 5rem;
+}
+
+.hero-column-image {
+  object-fit: scale-down;
+}
+
+/*# sourceMappingURL=contact.css.map */
