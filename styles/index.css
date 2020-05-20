@@ -1,3 +1,5 @@
+@import url("/modules/hero/css/hero.css");
+
 .hero-linkButtons,
 .signOff p {
   text-transform: uppercase;
@@ -11,7 +13,7 @@
   display: flex;
 }
 
-.hero {
+/* .hero {
   margin: 2rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
@@ -32,7 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .hero-linkButtons {
   margin-top: 3rem;
