@@ -11,3 +11,5 @@ This is a secret repo for Grace's website ;)
 - [x] Make the footer work properly
 - [ ] Hook up contact form somehow
 - [ ] Generate all content
+- [ ] Find way to host audio
+- [ ] Find way to interact with the instagram API?

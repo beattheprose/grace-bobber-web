@@ -1,0 +1,38 @@
+@import url("/modules/hero/css/hero.css");
+
+.title {
+  text-align: center;
+  margin-top: unset;
+  margin-bottom: 4rem;
+}
+
+.hero {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.hero-column {
+  align-items: center;
+}
+
+.resumeForm {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  color: #222222;
+  margin: 4rem 10%;
+  background-color: #222222;
+}
+
+@media all and (max-width: 750px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-column {
+    margin-bottom: 3rem;
+  }
+}
