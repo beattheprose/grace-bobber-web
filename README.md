@@ -9,3 +9,5 @@ This is a secret repo for Grace's website ;)
 - [ ] Think of a better way to handle news posts
 - [ ] Further modularize CSS
 - [x] Make the footer work properly
+- [ ] Hook up contact form somehow
+- [ ] Generate all content
