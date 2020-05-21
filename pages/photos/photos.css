@@ -89,6 +89,7 @@
 }
 
 .siteNav {
+  position: unset;
   z-index: 0; /* gotta fix this before we're through */
 }
 
