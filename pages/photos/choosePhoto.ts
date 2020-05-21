@@ -1,18 +1,19 @@
-const imageList = document.querySelectorAll(`.gallery-image`);
+const galleryList = document.querySelectorAll(`.gallery-image`);
 const bigImage = document.querySelector(`.big-image`) as HTMLImageElement;
-const downloadWrapper = document.querySelector(
-  `.download-wrapper`
-) as HTMLLinkElement;
+const modal = document.querySelector(`.modal`) as HTMLElement;
+const xButton = modal.querySelector(`.close`) as HTMLElement;
+const modalImage = modal.querySelector(`.modal-content`) as HTMLImageElement;
+const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
 
-const handleClick = (e) => {
-  bigImage.src = e.currentTarget.src;
-  downloadWrapper.href = e.currentTarget.src;
-  e.currentTarget.classList.add(`selected`);
-  imageList.forEach((image) => {
-    image !== e.currentTarget ? image.classList.remove(`selected`) : null;
-  });
+const handleImageClick = (e) => {
+  modal.style.display = `block`;
+  modalImage.src = e.currentTarget.src;
+  modalImage.alt = e.currentTarget.alt;
+  modalCaption.innerText = e.currentTarget.alt;
 };
 
-imageList.forEach((image: HTMLImageElement) =>
-  image.addEventListener(`click`, handleClick)
+galleryList.forEach((image: HTMLImageElement) =>
+  image.addEventListener(`click`, handleImageClick)
 );
+
+xButton.addEventListener(`click`, (e) => (modal.style.display = `none`));
