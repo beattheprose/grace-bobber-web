@@ -13,3 +13,5 @@ This is a secret repo for Grace's website ;)
 - [ ] Generate all content
 - [ ] Find way to host audio
 - [ ] Find way to interact with the instagram API?
+- [ ] Make sure every page has a title (esp after meta tag commit)
+- [ ] change all 
