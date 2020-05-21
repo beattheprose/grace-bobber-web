@@ -14,5 +14,5 @@ This is a secret repo for Grace's website ;)
 - [ ] Find way to host audio
 - [ ] Find way to interact with the instagram API?
 - [ ] Make sure every page has a title (esp after meta tag commit)
-- [ ] change the secrets.json to path to the real site
 - [ ] fix gallery image hack
+- [ ] Get grace's email as endpoint for the form
