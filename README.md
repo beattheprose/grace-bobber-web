@@ -9,9 +9,9 @@ This is a secret repo for Grace's website ;)
 - [ ] Think of a better way to handle news posts
 - [ ] Further modularize CSS
 - [x] Make the footer work properly
-- [ ] Hook up contact form somehow
+- [x] Hook up contact form somehow
 - [ ] Generate all content
 - [ ] Find way to host audio
 - [ ] Find way to interact with the instagram API?
 - [ ] Make sure every page has a title (esp after meta tag commit)
-- [ ] change all 
+- [ ] change the secrets.json to path to the real site
