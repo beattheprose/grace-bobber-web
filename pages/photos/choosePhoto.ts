@@ -1,7 +1,7 @@
 const galleryList = document.querySelectorAll(`.gallery-image`);
 const bigImage = document.querySelector(`.big-image`) as HTMLImageElement;
 const modal = document.querySelector(`.modal`) as HTMLElement;
-const xButton = modal.querySelector(`.close`) as HTMLElement;
+const xButton = modal.querySelector(`.closeButton`) as HTMLElement;
 const modalImage = modal.querySelector(`.modal-content`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
 
