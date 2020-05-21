@@ -1,0 +1,32 @@
+.gallery {
+  max-height: 9999px; /* there has to be something better than this hack */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(17vw, 1fr));
+  gap: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  color: black;
+  opacity: 0.75;
+  transition: all 0.2s;
+}
+
+.gallery-image.selected {
+  opacity: 1;
+}
+
+.big-image {
+  height: 500px;
+  margin-bottom: 3rem;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

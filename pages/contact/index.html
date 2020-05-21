@@ -3,7 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <!-- Primary Meta Tags -->
+    <title>Grace Bobber</title>
+    <meta name="title" content="Grace Bobber" />
+    <meta
+      name="description"
+      content="Grace Bobber is an actor, musician, and dancer living in Chicago. She graduated from Northwestern University and is represented by Shirley Hamilton Talent."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.gracebobber.com/" />
+    <meta property="og:title" content="Grace Bobber" />
+    <meta
+      property="og:description"
+      content="Grace Bobber is an actor, musician, and dancer living in Chicago. She graduated from Northwestern University and is represented by Shirley Hamilton Talent."
+    />
+    <meta property="og:image" content="/images/headshot.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.gracebobber.com/" />
+    <meta property="twitter:title" content="Grace Bobber" />
+    <meta
+      property="twitter:description"
+      content="Grace Bobber is an actor, musician, and dancer living in Chicago. She graduated from Northwestern University and is represented by Shirley Hamilton Talent."
+    />
+    <meta property="twitter:image" content="/images/headshot.jpg" />
     <link
       rel="shortcut icon"
       href="/images/sunflower.png"
@@ -83,15 +109,21 @@
 
         <div class="content-body">
           <form
-            action="http://serverlessforms.com/api/form/cf501fae-8141-52e6-9e96-4b22669eda28/form-response"
+            action="https://api.staticforms.xyz/submit"
             method="post"
             class="normform"
           >
             <fieldset>
               <legend>Drop me a line!</legend>
 
+              <input
+                type="hidden"
+                name="accessKey"
+                value="b4d89f1b-1b20-46a1-8df2-df016beb30a5"
+              />
               <label for="text-input">Name</label>
               <input
+                name="name"
                 type="text"
                 id="text-input"
                 value=""
@@ -101,6 +133,7 @@
 
               <label for="email-input">Email</label>
               <input
+                name="email"
                 type="email"
                 id="email-input"
                 value=""
@@ -110,6 +143,7 @@
 
               <label for="subject">Subject</label>
               <input
+                name="subject"
                 type="text"
                 id="subject"
                 value=""
@@ -119,13 +153,21 @@
 
               <label for="textarea">Message</label>
               <textarea
-                rows="6"
-                name="textarea"
+                rows="4"
+                name="message"
                 id="textarea"
                 placeholder="Insert message here..."
                 required
               ></textarea>
             </fieldset>
+            <input type="hidden" name="replyTo" value="@" />
+            <input
+              type="hidden"
+              name="redirectTo"
+              value="https://www.google.com"
+            />
+            <!--Spam Protection-->
+            <input type="text" name="honeypot" style="display: none;" />
             <div class="inline-buttons">
               <input type="reset" value="Reset" />
               <input type="submit" value="Send" />
