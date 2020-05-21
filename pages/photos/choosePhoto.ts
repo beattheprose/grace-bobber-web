@@ -4,8 +4,9 @@ const bigImage = document.querySelector(`.big-image`) as HTMLImageElement;
 const handleClick = (e) => {
   bigImage.src = e.currentTarget.src;
   e.currentTarget.classList.add(`selected`);
+  console.log(e.currentTarget, imageList);
   imageList.forEach((image) => {
-    !e.currentTarget ? image.classList.remove(`selected`) : null;
+    image !== e.currentTarget ? image.classList.remove(`selected`) : null;
   });
 };
 
