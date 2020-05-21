@@ -1,0 +1,19 @@
+.vidGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.vidGallery-video {
+  width: 100%;
+  height: auto;
+}
+.title {
+  margin-bottom: 4rem;
+}
