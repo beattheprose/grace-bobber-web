@@ -14,7 +14,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  color: black;
   opacity: 0.75;
   transition: all 0.2s;
 }
