@@ -1,5 +1,4 @@
 .gallery {
-  max-height: 9999px; /* there has to be something better than this hack */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(17vw, 1fr));
