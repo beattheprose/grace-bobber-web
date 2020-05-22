@@ -1,21 +1,21 @@
-const video = document.querySelector(`.video`) as any;
-const nav = document.querySelector(`.siteNav`) as HTMLElement;
+// const nav = document.querySelector(`.siteNav`) as HTMLElement;
 
-let videoBounding = video.getBoundingClientRect();
-const navBounding = nav.getBoundingClientRect();
+// let videoWrapperHeight = document
+//   .querySelector(`.video`)
+//   .getBoundingClientRect().height;
+// const navBounding = nav.getBoundingClientRect();
 
-const cleanVidHeight = videoBounding.height - navBounding.height;
+// function scrollCallbackHandler() {
+//   let ratioVisible =
+//     1 -
+//     (videoWrapperHeight - document.documentElement.scrollTop) /
+//       videoWrapperHeight;
+//   const heroWrapper = document.querySelector(`.heroWrapper`) as HTMLElement;
+//   if (ratioVisible > 0) {
+//     heroWrapper.classList.add(`heroWrapper-disabled`);
+//   } else {
+//     heroWrapper.classList.remove(`heroWrapper-disabled`);
+//   }
+// }
 
-function scrollCallbackHandler() {
-  let alpha =
-    1 - (cleanVidHeight - document.documentElement.scrollTop) / cleanVidHeight;
-  const heroWrapper = document.querySelector(`.heroWrapper`) as HTMLElement;
-  if (alpha > 0) {
-    heroWrapper.classList.add(`heroWrapper-disabled`);
-  } else {
-    heroWrapper.classList.remove(`heroWrapper-disabled`);
-  }
-}
-
-window.addEventListener(`scroll`, scrollCallbackHandler);
-
+// window.addEventListener(`scroll`, scrollCallbackHandler);
