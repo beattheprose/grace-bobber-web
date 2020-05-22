@@ -59,4 +59,21 @@
   }
 }
 
+.swipeOver .menuList-dropdown.menuList-dropdown-isOpen {
+  display: flex;
+  opacity: 1;
+  transform: unset;
+}
+
+.swipeOver .menuList-dropdown {
+  flex-direction: column;
+  transition: all 10s;
+  position: unset;
+  display: none;
+  background-color: transparent;
+  color: #222222;
+  padding: 0 0 0 4rem;
+  margin: 0;
+}
+
 /*# sourceMappingURL=index.css.map */
