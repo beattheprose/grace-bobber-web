@@ -4,10 +4,6 @@
   justify-content: space-between;
 }
 
-.content {
-  position: relative;
-}
-
 .siteNav {
   z-index: 1;
 }
@@ -86,7 +82,7 @@
   color: #222222cc;
 }
 
-.heroWrapper-arrowDown {
+.scrollDown-arrowDown {
   stroke: #222222cc;
   width: 4vw;
 }
@@ -105,7 +101,7 @@
 }
 
 .hero {
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,7 +109,7 @@
 }
 
 .hero-heroImage {
-  margin: 1.5rem 0;
+  margin: 0 3rem 1.5rem 2rem;
   max-width: 35%;
   border-radius: 50%;
   justify-self: center;
@@ -134,6 +130,7 @@
 
 .content-body {
   text-align: center;
+  margin-top: 0;
 }
 
 .content-body img {
@@ -165,27 +162,38 @@
   .heroWrapper {
     position: absolute;
     bottom: 0;
-    height: 20vh;
-    margin-bottom: 15vh;
     justify-content: space-between;
+  }
+
+  .heroWrapper-textBlock {
+    margin-bottom: 3vh;
   }
 
   .heroWrapper-heroName {
     margin: 0;
+    width: 100vw;
     font-size: 15vmin;
     text-align: center;
     width: 100%;
     color: white;
-    text-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.5);
+    text-shadow: 0.3vw 0.4vw 0.1vw #222222;
     font-style: italic;
   }
 
+  .heroWrapper-linkButtons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
   .heroWrapper-linkButtons > .heroWrapper-linkButton {
+    padding: 2vw;
     border: 0.125vw solid white;
+    margin-top: 2vh;
     border-radius: 0.25rem;
     background: hsla(0, 0%, 0%, 0.5);
     color: white;
-    font-size: 3vmin;
+    font-size: 3vw;
     white-space: nowrap;
     text-decoration: none;
     cursor: pointer;
@@ -199,17 +207,21 @@
     padding: 1.5vw;
   }
 
+  .scrollDown {
+    position: unset;
+  }
+
   .scrollDown-invite {
     margin: 0;
     font-size: 4vmin;
     color: white;
     font-style: italic;
-    text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
+    text-shadow: 0.2vw 0.4vw 0.3vw #222222;
   }
 
-  .heroWrapper-arrowDown {
-    text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
-    color: white;
+  .scrollDown-arrowDown {
+    text-shadow: 0.2vw 0.4vw 0.3vw #222222;
+    stroke: white;
     font-size: 4vmin;
   }
 }
