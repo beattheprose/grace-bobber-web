@@ -31,33 +31,16 @@
 .video {
   object-fit: cover;
   height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
   z-index: -1;
 }
 
 .heroWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
   justify-content: flex-end;
   align-items: center;
   z-index: 150;
   transition: all 0.75s ease-in-out;
-}
-
-.heroWrapperContent {
-  height: 30vmax;
-  margin-bottom: 5vmax;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .heroWrapper-heroName {
@@ -106,7 +89,6 @@
 .heroWrapper-arrowDown {
   text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
   color: white;
-  margin-bottom: 5vh;
   font-size: 4vmin;
 }
 
@@ -165,6 +147,34 @@
 
 .signOff-signature {
   font-style: italic;
+}
+
+.videoWrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 4rem;
+  height: 100vh;
+}
+
+@media all and (max-width: 500px) {
+  .videoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video {
+    top: 0;
+    left: 0;
+  }
+
+  .heroWrapper {
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    margin-bottom: 15vh;
+    justify-content: space-between;
+  }
 }
 
 @media all and (max-width: 1000px) {
