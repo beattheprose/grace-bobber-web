@@ -1,3 +1,9 @@
+//sticky, but not annoying nav
+import Headroom from "headroom.js";
+const siteNav = document.querySelector(`nav`) as HTMLElement;
+var headroom = new Headroom(siteNav);
+headroom.init();
+
 const siteNavHamburger = document.querySelector(
   `.siteNav-hamburger`
 ) as HTMLElement;

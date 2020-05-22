@@ -147,12 +147,28 @@ a {
 }
 
 .siteNav {
+  position: sticky;
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   align-items: center;
   padding: 2rem 4rem;
   top: 0;
   background: white;
+}
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+nav.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+nav.headroom--pinned {
+  transform: translateY(0%);
+}
+nav.headroom--unpinned {
+  transform: translateY(-100%);
 }
 
 .siteNav * {
