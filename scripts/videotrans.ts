@@ -19,13 +19,3 @@ function scrollCallbackHandler() {
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
 
-console.log(videoBounding.height);
-
-// modified headroom script
-import Headroom from "headroom.js";
-const indexNav = document.querySelector(`nav`) as HTMLElement;
-var options = {
-  offset: video.clientHeight,
-};
-var headroom = new Headroom(indexNav, options);
-headroom.init();

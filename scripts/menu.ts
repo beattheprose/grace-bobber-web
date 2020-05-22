@@ -1,8 +1,13 @@
 //sticky, but not annoying nav
 import Headroom from "headroom.js";
-const headRoomNav = document.querySelector(`.headroomNav`) as HTMLElement;
-var headroom = new Headroom(headRoomNav);
-headRoomNav ? headroom.init() : null;
+const siteNav = document.querySelector(`nav`) as HTMLElement;
+const videoWrapper = document.querySelector(`.videoWrapper`) as HTMLElement;
+let options;
+videoWrapper
+  ? (options = { offset: videoWrapper.clientHeight })
+  : (options = {});
+var headroom = new Headroom(siteNav, options);
+headroom.init();
 
 const siteNavHamburger = document.querySelector(
   `.siteNav-hamburger`
