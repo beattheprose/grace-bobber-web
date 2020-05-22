@@ -13,13 +13,6 @@ const cleanVidHeight = videoBounding.height - navBounding.height;
 const scrollCallbackHandler = () => {
   let alpha =
     1 - (cleanVidHeight - document.documentElement.scrollTop) / cleanVidHeight;
-  nav.style.backgroundColor = `rgba(255,255,255,${alpha})`;
-  titleName.style.color = `rgba(0,0,0,${alpha})`;
-  link.forEach((link) => {
-    link.style.color = `rgba(0,0,0,${alpha})`;
-  });
-
-  console.log(alpha);
   const heroWrapper = document.querySelector(`.heroWrapper`) as HTMLElement;
   if (alpha > 0) {
     heroWrapper.classList.add(`heroWrapper-disabled`);
@@ -29,3 +22,8 @@ const scrollCallbackHandler = () => {
 };
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
+
+import Headroom from "headroom.js";
+const siteNav = document.querySelector(`nav`) as HTMLElement;
+var headroom = new Headroom(siteNav);
+headroom.init();
