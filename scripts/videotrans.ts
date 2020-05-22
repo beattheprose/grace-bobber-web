@@ -1,11 +1,7 @@
 const video = document.querySelector(`.video`) as any;
 const nav = document.querySelector(`.siteNav`) as HTMLElement;
-// const link = document.querySelectorAll(`.menuList-link`) as any;
-// const titleName = document.querySelector(
-//   `.siteNav-siteTitle>h3`
-// ) as HTMLElement;
 
-const videoBounding = video.getBoundingClientRect();
+let videoBounding = video.getBoundingClientRect();
 const navBounding = nav.getBoundingClientRect();
 
 const cleanVidHeight = videoBounding.height - navBounding.height;
@@ -23,12 +19,13 @@ function scrollCallbackHandler() {
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
 
+console.log(videoBounding.height);
+
 // modified headroom script
 import Headroom from "headroom.js";
 const indexNav = document.querySelector(`nav`) as HTMLElement;
-const videoHeight = videoBounding.height;
 var options = {
-  offset: videoHeight,
+  offset: video.clientHeight,
 };
 var headroom = new Headroom(indexNav, options);
 headroom.init();
