@@ -1,9 +1,9 @@
 const video = document.querySelector(`.video`) as any;
 const nav = document.querySelector(`.siteNav`) as HTMLElement;
-const link = document.querySelectorAll(`.menuList-link`) as any;
-const titleName = document.querySelector(
-  `.siteNav-siteTitle>h3`
-) as HTMLElement;
+// const link = document.querySelectorAll(`.menuList-link`) as any;
+// const titleName = document.querySelector(
+//   `.siteNav-siteTitle>h3`
+// ) as HTMLElement;
 
 const videoBounding = video.getBoundingClientRect();
 const navBounding = nav.getBoundingClientRect();
@@ -19,7 +19,10 @@ const scrollCallbackHandler = () => {
   } else {
     heroWrapper.classList.remove(`heroWrapper-disabled`);
   }
+  return alpha;
 };
+
+console.log(alpha);
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
 
