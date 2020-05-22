@@ -37,59 +37,68 @@
 .heroWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   z-index: 150;
   transition: all 0.75s ease-in-out;
 }
 
-.heroWrapper-heroName {
-  margin: 0;
-  font-size: 15vmin;
-  text-align: center;
-  width: 100%;
-  color: white;
-  text-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.5);
-  font-style: italic;
+.heroWrapper-textBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15vh;
 }
 
 .heroWrapper-disabled {
   transform: translateY(-100vh);
 }
 
+.heroWrapper-heroName {
+  margin: 0 0 1vw 0;
+  font-size: 7vw;
+  text-align: center;
+  color: #222222;
+  font-style: italic;
+}
+
 .heroWrapper-linkButtons > .heroWrapper-linkButton {
-  border: 0.125vw solid white;
-  margin: 0 1.5vw;
-  padding: 2vmin;
+  border: 0.125vw solid black;
+  font-size: 1.25vw;
   border-radius: 0.25rem;
-  background: hsla(0, 0%, 0%, 0.5);
-  color: white;
-  font-size: 3vmin;
+  color: #222222;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  padding: 1vw;
+  margin: 0 1rem;
 }
 
 .heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
-  color: hsla(0, 0%, 0%, 1);
-  background-color: hsla(0, 0%, 100%, 0.75);
-  border: 0.125vw solid black;
-  padding: 1.5vw;
+  padding: 1.15vw;
 }
 
-.heroWrapper-invite {
+.scrollDown {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.scrollDown-invite {
   margin: 0;
-  font-size: 4vmin;
-  color: white;
+  font-size: 2vw;
   font-style: italic;
-  text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
+  color: #222222cc;
 }
 
 .heroWrapper-arrowDown {
-  text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
-  color: white;
-  font-size: 4vmin;
+  stroke: #222222cc;
+  width: 4vw;
 }
 
 .hero-linkButtons,
@@ -151,9 +160,9 @@
 
 .videoWrapper {
   display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 4rem;
-  height: 100vh;
+  grid-template-columns: 1fr 1.6fr;
+  height: 100%;
+  width: 100%;
 }
 
 @media all and (max-width: 500px) {
@@ -163,17 +172,55 @@
     align-items: center;
   }
 
-  .video {
-    top: 0;
-    left: 0;
-  }
-
   .heroWrapper {
     position: absolute;
     bottom: 0;
     height: 20vh;
     margin-bottom: 15vh;
     justify-content: space-between;
+  }
+
+  .heroWrapper-heroName {
+    margin: 0;
+    font-size: 15vmin;
+    text-align: center;
+    width: 100%;
+    color: white;
+    text-shadow: 0.2vw 0.4vw 0.4vw rgba(0, 0, 0, 0.5);
+    font-style: italic;
+  }
+
+  .heroWrapper-linkButtons > .heroWrapper-linkButton {
+    border: 0.125vw solid white;
+    border-radius: 0.25rem;
+    background: hsla(0, 0%, 0%, 0.5);
+    color: white;
+    font-size: 3vmin;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+  }
+
+  .heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
+    color: hsla(0, 0%, 0%, 1);
+    background-color: hsla(0, 0%, 100%, 0.75);
+    border: 0.125vw solid black;
+    padding: 1.5vw;
+  }
+
+  .scrollDown-invite {
+    margin: 0;
+    font-size: 4vmin;
+    color: white;
+    font-style: italic;
+    text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
+  }
+
+  .heroWrapper-arrowDown {
+    text-shadow: 0.2vw 0.4vw 0.3vw rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 4vmin;
   }
 }
 
