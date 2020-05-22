@@ -1,2 +1,2 @@
-
+.twoCol{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:4rem;gap:4rem}.title{font-style:italic}.right{align-items:center;text-align:center}.instaHandle{font-weight:bold}
 /*# sourceMappingURL=fishercats.css.map */
