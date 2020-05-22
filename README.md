@@ -10,9 +10,9 @@ This is a secret repo for Grace's website ;)
 - [ ] Further modularize CSS
 - [x] Make the footer work properly
 - [x] Hook up contact form somehow
-- [ ] Generate all content
-- [ ] Find way to host audio
-- [ ] Find way to interact with the instagram API?
+- [x] Generate all content
+- [x] Find way to host audio
+- [ ] Find way to interact with the instagram API? [LONG-TERM GOAL]
 - [ ] Make sure every page has a title (esp after meta tag commit)
 - [ ] fix gallery image hack
 - [ ] Get grace's email as endpoint for the form
