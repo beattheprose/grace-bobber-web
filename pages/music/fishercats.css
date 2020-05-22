@@ -1,7 +1,12 @@
 .twoCol {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 4rem;
+}
+
+.video {
+  width: 100%;
+  height: 25rem;
 }
 
 .title {
@@ -15,4 +20,36 @@
 
 .instaHandle {
   font-weight: bold;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.band-image {
+  width: 100%;
+  align-self: center;
+  height: 500px;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media all and (max-width: 775px) {
+  .twoCol {
+    display: flex;
+    flex-direction: column;
+  }
+  .video {
+    width: 75%;
+  }
+  .band-image {
+    height: unset;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  .content {
+    padding: 0 20rem;
+  }
 }
