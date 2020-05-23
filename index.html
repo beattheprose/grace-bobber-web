@@ -35,10 +35,7 @@
       href="/images/sunflower.png"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    
     <link rel="stylesheet" href="/dist/styles/base.css" />
     <link rel="stylesheet" href="/dist/styles/global.css" />
     <link rel="stylesheet" href="/dist/styles/index.css" />
@@ -60,7 +57,14 @@
             src="videos/Grace Bobber Performance Reel-MvuiZ23mONY.mp4"
             type="video/webm"
           />
-          <p>Your browser doesn't support this embedded video.</p>
+          <p>
+            Your browser doesn't support this embedded video :( Check out
+            Grace's
+            <a href="https://youtube.com/channel/UCrHRRBWgNyX_rMAJCMHqaUQ"
+              >Youtube channel</a
+            >
+            instead!
+          </p>
         </video>
 
         <div class="heroWrapper">
@@ -143,7 +147,19 @@
             <a class="menuList-link" href="/pages/contact">Contact</a>
           </li>
         </ul>
-        <a class="siteNav-hamburger fa fa-bars"></a>
+        <svg
+          class="siteNav-hamburger"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          aria-labelledby="hamburgerIconTitle"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <title id="hamburgerIconTitle">Menu</title>
+          <path d="M6 7L18 7M6 12L18 12M6 17L18 17" />
+        </svg>
       </nav>
       <div class="swipeOver">
         <ul class="swipeOver-linkList">
@@ -178,7 +194,7 @@
             <a class="swipeOver-link" href="/pages/contact">Contact</a>
           </li>
         </ul>
-        <a class="fa fa-close close"></a>
+        <a class="close">&times;</a>
       </div>
 
       <main class="content">
