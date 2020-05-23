@@ -242,12 +242,6 @@ nav.headroom--unpinned {
   background-color: #222222;
 }
 
-.swipeOver .swipeOver-dropdown.menuList-dropdown-isOpen {
-  display: flex;
-  opacity: 1;
-  transform: unset;
-}
-
 .swipeOver-dropdown {
   flex-direction: column;
   transition: all 10s;
@@ -261,6 +255,12 @@ nav.headroom--unpinned {
 
 .swipeOver-dropdown > a {
   border: none;
+}
+
+.swipeOver-dropdown-isOpen {
+  display: flex;
+  opacity: 1;
+  transform: unset;
 }
 
 @media all and (max-width: 1000px) {

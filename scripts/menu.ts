@@ -16,9 +16,9 @@ const swipeOverDropDown = swipeOver.querySelectorAll(`.swipeOver-dropdown`);
 const handleSwipeClick = (e) => {
   e.preventDefault();
   swipeOverDropDown.forEach((element) =>
-    element.classList.remove(`menuList-dropdown-isOpen`)
+    element.classList.remove(`swipeOver-dropdown-isOpen`)
   );
-  e.currentTarget.nextElementSibling.classList.add(`menuList-dropdown-isOpen`);
+  e.currentTarget.nextElementSibling.classList.add(`swipeOver-dropdown-isOpen`);
 };
 
 swipeOverDropDown.forEach((dropDown: HTMLElement) => {
