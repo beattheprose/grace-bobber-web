@@ -46,7 +46,59 @@
 
   <body>
     <section class="mainContent">
-      <nav class="siteNav headroomNav">
+      <header class="videoWrapper">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          preload
+          poster="images/cabaret.jpg"
+          class="video"
+        >
+          <source
+            src="videos/Grace Bobber Performance Reel-MvuiZ23mONY.webm#t=25"
+            type="video/webm"
+          />
+          <p>Your browser doesn't support this embedded video.</p>
+        </video>
+
+        <div class="heroWrapper">
+          <section class="heroWrapper-textBlock">
+            <h3 class="heroWrapper-heroName">
+              Grace Bobber
+            </h3>
+            <section class="heroWrapper-linkButtons">
+              <a href="#" class="heroWrapper-linkButton small-caps"
+                >Headshot/Resume</a
+              >
+              <a href="#" class="heroWrapper-linkButton small-caps">Contact</a>
+            </section>
+          </section>
+          <!-- Arrow Down -->
+          <footer class="scrollDown">
+            <p class="scrollDown-invite">
+              scroll for more
+            </p>
+            <svg
+              class="scrollDown-arrowDown"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-labelledby="chevronDownIconTitle"
+              stroke-width="2.25"
+              stroke-linecap="round"
+              stroke-linejoin="miter"
+              fill="none"
+            >
+              <title id="chevronDownIconTitle">Chevron Down</title>
+              <polyline points="6 10 12 16 18 10" />
+            </svg>
+          </footer>
+        </div>
+      </header>
+
+      <nav class="siteNav">
         <a class="siteNav-siteTitle" href="/"><h3>Grace Bobber</h3></a>
         <ul class="menuList">
           <li>
@@ -83,65 +135,23 @@
         <a class="siteNav-hamburger fa fa-bars"></a>
       </nav>
       <div class="swipeOver">
-        <ul class="swipeOver-linkList">
-          <li>
-            <a class="menuList-link" href="/">Bio</a>
-          </li>
-          <li>
-            <a class="menuList-link" href="/pages/news">News</a>
-          </li>
-          <li>
-            <a class="menuList-link" href="/test-page.html">Media</a>
-            <div class="menuList-dropdown">
-              <a href="/pages/photos" class="small-caps">Photos</a>
-              <a href="/pages/videos" class="small-caps">Videos</a>
-            </div>
-          </li>
-          <li>
-            <a class="menuList-link" href="/pages/headshotsresume/"
-              >Headshots & Resume</a
-            >
-          </li>
-          <li>
-            <a class="menuList-link" href="/test-page.html">Music</a>
-            <div class="menuList-dropdown">
-              <a href="/pages/music/thunk.html" class="small-caps">Thunk</a>
-              <a href="/pages/music/fishercats.html" class="small-caps"
-                >The Fisher Cats</a
-              >
-            </div>
-          </li>
-          <li>
-            <a class="menuList-link" href="/pages/contact">Contact</a>
-          </li>
-        </ul>
+        <ul class="swipeOver-linkList"></ul>
         <a class="fa fa-close close"></a>
       </div>
 
       <main class="content">
-        <header class="hero">
-          <section class="hero-column">
+        <section class="content-body">
+          <header class="hero">
             <img
+              class="hero-heroImage"
               src="/images/headshot.jpg"
               alt="Grace Bobber's headshot"
-              class="hero-column-image"
             />
-          </section>
-          <section class="hero-column">
-            <h2 style="text-align: center;">Hey there, I'm Grace!</h2>
-            <h2 style="text-align: center;">
-              I'm an actor, musician, and dancer living in Chicago.
-            </h2>
-            <div class="hero-linkButtons">
-              <a href="/" class="button">Headshot</a>
-              <a href="/" class="button">Resume</a>
-              <a href="/" class="button">Instagram</a>
-              <a href="/" class="button">Youtube</a>
+            <div class="hero-heroBody">
+              <h2>Hey there, I'm Grace!</h2>
+              <h2>I'm an actor, musician, and dancer living in Chicago.</h2>
             </div>
-          </section>
-        </header>
-
-        <section class="content-body">
+          </header>
           <p>
             I recently graduated from Northwestern University with a degree in
             theater and music. I am proudly represented by
@@ -212,5 +222,6 @@
     </footer>
 
     <script src="/dist/scripts/menu.js"></script>
+    <script src="/dist/scripts/videotrans.js"></script>
   </body>
 </html>
