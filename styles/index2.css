@@ -208,7 +208,7 @@
   }
 
   .scrollDown {
-    position: unset;
+    position: static;
   }
 
   .scrollDown-invite {
@@ -216,7 +216,7 @@
     font-size: 4vmin;
     color: white;
     font-style: italic;
-    text-shadow: 0.2vw 0.4vw 0.3vw #222222;
+    /* text-shadow: 0.2vw 0.4vw 0.3vw #222222; */
   }
 
   .scrollDown-arrowDown {
