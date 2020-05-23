@@ -74,6 +74,7 @@ h6 {
   font-size: 1rem;
 }
 
+.swipeOver-link,
 .menuList-link,
 .small-caps {
   text-transform: uppercase;
@@ -211,6 +212,7 @@ nav.headroom--unpinned {
   transition: all 0.3s ease-in;
 }
 
+.swipeOver-link,
 .menuList-link {
   border-bottom: none;
   color: #222222;

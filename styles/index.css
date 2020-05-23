@@ -33,7 +33,7 @@
 }
 
 /* from index2.css */
-.mainContent {
+.contentWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
