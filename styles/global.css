@@ -124,18 +124,20 @@ a {
   width: 100vw;
   height: 200vh;
   background-color: white;
-  padding: 5rem;
+  padding: 5rem 0 5rem 5rem;
   transform: translateX(-200%);
   transition: transform 0.5s ease-out;
-  z-index: 2;
+  z-index: 19;
 }
 
 .close {
+  padding-right: 5rem;
   color: gray;
   font-size: 2.5rem;
   height: 2.5rem;
   border: none;
   cursor: pointer;
+  z-index: 5;
 }
 
 .swipeOver ul {
@@ -274,5 +276,18 @@ nav.headroom--unpinned {
 
   .siteNav > ul {
     display: none;
+  }
+  .siteNav-siteTitle h3 {
+    font-size: 3rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .hero-heroImage {
+    width: 40%;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
   }
 }

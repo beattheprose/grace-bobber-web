@@ -24,10 +24,6 @@
   text-align: center;
 }
 
-.content-body img {
-  width: 50%;
-}
-
 .signOff {
   text-align: right;
 }
@@ -35,8 +31,6 @@
 .signOff-signature {
   font-style: italic;
 }
-
-
 
 /* from index2.css */
 .mainContent {
@@ -174,10 +168,6 @@
   margin-top: 0;
 }
 
-.content-body img {
-  width: 50%;
-}
-
 .signOff {
   text-align: right;
 }
@@ -191,6 +181,10 @@
   grid-template-columns: 1fr 1.6fr;
   height: 100%;
   width: 100%;
+}
+
+.bodyImage {
+  width: 50%;
 }
 
 @media all and (max-width: 500px) {
@@ -268,11 +262,13 @@
 }
 
 @media all and (max-width: 1000px) {
-  .content-body img {
-    width: 100%;
-  }
-
   .hero h2 {
     font-size: 3rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .bodyImage {
+    width: 100%;
   }
 }
