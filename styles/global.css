@@ -242,13 +242,13 @@ nav.headroom--unpinned {
   background-color: #222222;
 }
 
-.swipeOver .menuList-dropdown.menuList-dropdown-isOpen {
+.swipeOver .swipeOver-dropdown.menuList-dropdown-isOpen {
   display: flex;
   opacity: 1;
   transform: unset;
 }
 
-.swipeOver .menuList-dropdown {
+.swipeOver-dropdown {
   flex-direction: column;
   transition: all 10s;
   position: unset;
@@ -257,6 +257,10 @@ nav.headroom--unpinned {
   color: #222222;
   padding: 0 0 0 4rem;
   margin: 0;
+}
+
+.swipeOver-dropdown > a {
+  border: none;
 }
 
 @media all and (max-width: 1000px) {
