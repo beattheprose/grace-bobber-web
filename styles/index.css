@@ -2,12 +2,17 @@
   transform: translateY(-100vh);
 }
 
+.heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
+  padding: 1.15vw;
+  background: #222222;
+  color: white;
+}
+
 .content {
   align-items: center;
   text-align: center;
 }
 
-.hero-linkButtons,
 .signOff p {
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -175,6 +180,13 @@
     text-decoration: none;
     cursor: pointer;
     transition: 0.15s ease-in-out;
+  }
+
+  .heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
+    color: hsla(0, 0%, 0%, 1);
+    background-color: hsla(0, 0%, 100%, 0.75);
+    border: 0.125vw solid #222222;
+    padding: 1.5vw;
   }
 
   .scrollDown {
