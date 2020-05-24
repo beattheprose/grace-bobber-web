@@ -30,6 +30,9 @@ const siteNavHamburger = document.querySelector(
   `.siteNav-hamburger`
 ) as HTMLElement;
 const closeButton = document.querySelector(`.close`) as HTMLElement;
+const mobileMenuButton = document.querySelector(
+  `.mobileMenuButton`
+) as HTMLElement;
 
 const swipeOverToggle = () => {
   if (siteNavHamburger && swipeOver && closeButton) {
@@ -39,3 +42,6 @@ const swipeOverToggle = () => {
 
 siteNavHamburger.addEventListener(`click`, swipeOverToggle);
 closeButton.addEventListener(`click`, swipeOverToggle);
+mobileMenuButton
+  ? mobileMenuButton.addEventListener(`click`, swipeOverToggle)
+  : null;
