@@ -8,16 +8,10 @@
 }
 
 /* flex col */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-/* flex  centered col vertical align */
+body,
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .swipeOver,
@@ -25,8 +19,7 @@ body {
   display: flex;
 }
 
-* {
-  font-weight: normal;
+html {
   font-family: var(--body-text);
   color: var(--foreground-color);
 }
@@ -53,6 +46,7 @@ h6 {
   font-family: var(--heading-text);
   line-height: 1.1;
   margin: 1.5rem 0;
+  font-weight: normal;
 }
 
 h1 {
@@ -98,57 +92,7 @@ a {
   border-bottom: 1px solid rgba(34, 34, 34, 0.3);
 }
 
-.footer {
-  background-color: #222222;
-  color: white;
-  text-align: center;
-  margin-top: 3rem;
-  padding: 6rem 2rem;
-}
-
-.footer-links {
-  text-decoration-line: none;
-  text-decoration-style: solid;
-  text-decoration-color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.footer span {
-  padding: 0 0.5rem;
-  color: #ececec;
-}
-
-.swipeOver {
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  padding: 3rem 4rem;
-  transform: translateX(-200%);
-  transition: transform 0.5s ease-out;
-  z-index: 19;
-}
-
-.close {
-  color: gray;
-  font-size: 3rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  z-index: 5;
-}
-
-.swipeOver ul {
-  line-height: 2.5;
-}
-
-.swipeOver-isOpen {
-  transform: translateX(0);
-}
-
+/* NAV */
 .siteNav {
   position: sticky;
   display: grid;
@@ -159,18 +103,14 @@ a {
   background: white;
 }
 
-/**
- * Note: I have omitted any vendor-prefixes for clarity.
- * Adding them is left as an exercise for the reader.
- */
-nav.headroom {
+.siteNav.headroom {
   will-change: transform;
   transition: transform 200ms linear;
 }
-nav.headroom--pinned {
+.siteNav.headroom--pinned {
   transform: translateY(0%);
 }
-nav.headroom--unpinned {
+.siteNav.headroom--unpinned {
   transform: translateY(-100%);
 }
 
@@ -226,20 +166,27 @@ nav.headroom--unpinned {
   display: none;
 }
 
-.button {
-  padding: 2rem 3rem;
-  margin: 1.5rem 3rem;
-  border: 0.25rem solid black;
-  transition: 0.15s ease-in-out;
-  background: transparent;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+/* SWIPEOVER */
+.swipeOver {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 3rem 4rem;
+  transform: translateX(-200%);
+  transition: transform 0.5s ease-out;
+  z-index: 19;
 }
 
-.button:hover {
-  color: white;
-  background-color: #222222;
+.swipeOver ul {
+  line-height: 2.5;
+}
+
+.swipeOver-isOpen {
+  transform: translateX(0);
 }
 
 .swipeOver-dropdown {
@@ -263,6 +210,53 @@ nav.headroom--unpinned {
   transform: unset;
 }
 
+.close {
+  color: gray;
+  font-size: 3rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 6rem 2rem;
+}
+
+.footer-links {
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer span {
+  padding: 0 0.5rem;
+  color: #ececec;
+}
+
+/* GLOBAL COMPONENTS */
+.button {
+  padding: 2rem 3rem;
+  margin: 1.5rem 3rem;
+  border: 0.25rem solid black;
+  transition: 0.15s ease-in-out;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.button:hover {
+  color: white;
+  background-color: #222222;
+}
+
 @media all and (max-width: 1000px) {
   .content {
     margin: 5vw;
@@ -284,16 +278,6 @@ nav.headroom--unpinned {
     display: none;
   }
   .siteNav-siteTitle h3 {
-    font-size: 3rem;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .hero-heroImage {
-    width: 40%;
-  }
-
-  .hero h2 {
     font-size: 3rem;
   }
 }
