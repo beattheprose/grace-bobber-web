@@ -261,9 +261,21 @@
       <main class="content">
         <header class="hero">
           <img
-            class="hero-heroImage"
+            sizes="(max-width: 1000px) 100vw, 1000px"
+            srcset="
+              /images/headshot.jpg?nf_resize=fit&w=200w   200w,
+              /images/headshot.jpg?nf_resize=fit&w=353w   353w,
+              /images/headshot.jpg?nf_resize=fit&w=471w   471w,
+              /images/headshot.jpg?nf_resize=fit&w=574w   574w,
+              /images/headshot.jpg?nf_resize=fit&w=663w   663w,
+              /images/headshot.jpg?nf_resize=fit&w=749w   749w,
+              /images/headshot.jpg?nf_resize=fit&w=831w   831w,
+              /images/headshot.jpg?nf_resize=fit&w=902w   902w,
+              /images/headshot.jpg?nf_resize=fit&w=1000w 1000w
+            "
             src="/images/headshot.jpg"
             alt="Grace Bobber's headshot"
+            class="hero-heroImage"
           />
           <div class="hero-heroBody">
             <h2>Hey there, I'm Grace!</h2>
