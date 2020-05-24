@@ -48,10 +48,10 @@
 
 @keyframes shadow-pulse {
   0% {
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
   }
   100% {
-    box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 17px rgba(255, 255, 255, 0);
   }
 }
 
@@ -68,7 +68,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: shadow-pulse 1s 10;
 }
 
 .mutebutton:hover {
