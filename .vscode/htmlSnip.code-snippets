@@ -53,7 +53,9 @@
 			"/>",
 			"<link rel=\"stylesheet\" href=\"/dist/styles/base.css\" />",
 			"<link rel=\"stylesheet\" href=\"/dist/styles/global.css\" />",
-			"</head>",
+			"    <link rel="preload" href="/dist/scripts/menu.js" as="script" />
+  </head>
+",
 			"",
 			"<body>",
 			"<section class=\"contentWrapper\">",
