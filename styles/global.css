@@ -1,12 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Work+Sans:ital,wght@0,400;0,450;1,400;1,450&display=swap");
 
-/* we can also @import the css from our modules specific css here, and just link to the global scope in each of our html files*/
-
 :root {
   --body-text: "Work Sans";
   --heading-text: "Baskervville";
   --foreground-color: #222222;
   --background-color: white;
+}
+
+/* flex col */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* flex  centered col vertical align */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .swipeOver,
@@ -22,8 +33,6 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -32,10 +41,6 @@ strong {
 }
 
 .content {
-  margin: 0 4rem;
-}
-
-.content-body {
   margin: 0 15vw;
 }
 
@@ -91,10 +96,6 @@ p {
 a {
   text-decoration-line: none;
   border-bottom: 1px solid rgba(34, 34, 34, 0.3);
-}
-
-.disable-scroll {
-  overflow: auto;
 }
 
 .footer {
@@ -263,7 +264,7 @@ nav.headroom--unpinned {
 }
 
 @media all and (max-width: 1000px) {
-  .content-body {
+  .content {
     margin: 5vw;
   }
 

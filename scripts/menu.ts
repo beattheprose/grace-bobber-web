@@ -35,7 +35,6 @@ const swipeOverToggle = () => {
   if (siteNavHamburger && swipeOver && closeButton) {
     swipeOver.classList.toggle(`swipeOver-isOpen`);
   }
-  document.querySelector(`body`).classList.toggle(`disable-scroll`);
 };
 
 siteNavHamburger.addEventListener(`click`, swipeOverToggle);
