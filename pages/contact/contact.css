@@ -1,9 +1,36 @@
-@import url("/modules/hero/css/hero.css");
+.siteNav {
+  z-index: 150;
+}
+
+.contact {
+  align-items: center;
+}
 
 .hero {
-  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  align-self: center;
+}
+
+.hero-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-column-image {
-  object-fit: scale-down;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-subtitle {
+  font-style: italic;
+}
+
+.contact-form {
+  max-width: 700px;
+  width: 100%;
+  align-self: center;
 }

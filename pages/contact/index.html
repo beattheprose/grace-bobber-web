@@ -36,6 +36,9 @@
       type="image/x-icon"
     />
 
+    <link rel="preload" href="/dist/styles/base.css" as="style" />
+    <link rel="preload" href="/dist/styles/global.css" as="style" />
+
     <link rel="stylesheet" href="/dist/styles/base.css" />
     <link rel="stylesheet" href="/dist/styles/global.css" />
     <link rel="stylesheet" href="/dist/styles/contact.css" />
@@ -149,73 +152,71 @@
           </section>
         </article>
 
-        <div class="content-body">
-          <form
-            action="https://api.staticforms.xyz/submit"
-            method="post"
-            class="normform"
-          >
-            <fieldset>
-              <legend>Drop me a line!</legend>
+        <form
+          action="https://api.staticforms.xyz/submit"
+          method="post"
+          class="normform contact-form"
+        >
+          <fieldset>
+            <legend>Drop me a line!</legend>
 
-              <input
-                type="hidden"
-                name="accessKey"
-                value="b4d89f1b-1b20-46a1-8df2-df016beb30a5"
-              />
-              <label for="text-input">Name</label>
-              <input
-                name="name"
-                type="text"
-                id="text-input"
-                value=""
-                required
-                placeholder="Jane Doe"
-              />
-
-              <label for="email-input">Email</label>
-              <input
-                name="email"
-                type="email"
-                id="email-input"
-                value=""
-                required
-                placeholder="grace@gracebobber.com"
-              />
-
-              <label for="subject">Subject</label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                value=""
-                required
-                placeholder="Subject"
-              />
-
-              <label for="textarea">Message</label>
-              <textarea
-                rows="4"
-                name="message"
-                id="textarea"
-                placeholder="Insert message here..."
-                required
-              ></textarea>
-            </fieldset>
-            <input type="hidden" name="replyTo" value="@" />
             <input
               type="hidden"
-              name="redirectTo"
-              value="https://www.google.com"
+              name="accessKey"
+              value="b4d89f1b-1b20-46a1-8df2-df016beb30a5"
             />
-            <!--Spam Protection-->
-            <input type="text" name="honeypot" style="display: none;" />
-            <div class="inline-buttons">
-              <input type="reset" value="Reset" />
-              <input type="submit" value="Send" />
-            </div>
-          </form>
-        </div>
+            <label for="text-input">Name</label>
+            <input
+              name="name"
+              type="text"
+              id="text-input"
+              value=""
+              required
+              placeholder="Jane Doe"
+            />
+
+            <label for="email-input">Email</label>
+            <input
+              name="email"
+              type="email"
+              id="email-input"
+              value=""
+              required
+              placeholder="grace@gracebobber.com"
+            />
+
+            <label for="subject">Subject</label>
+            <input
+              name="subject"
+              type="text"
+              id="subject"
+              value=""
+              required
+              placeholder="Subject"
+            />
+
+            <label for="textarea">Message</label>
+            <textarea
+              rows="4"
+              name="message"
+              id="textarea"
+              placeholder="Insert message here..."
+              required
+            ></textarea>
+          </fieldset>
+          <input type="hidden" name="replyTo" value="@" />
+          <input
+            type="hidden"
+            name="redirectTo"
+            value="https://www.google.com"
+          />
+          <!--Spam Protection-->
+          <input type="text" name="honeypot" style="display: none;" />
+          <div class="inline-buttons">
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Send" />
+          </div>
+        </form>
       </main>
     </section>
 
