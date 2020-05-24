@@ -33,6 +33,7 @@ const closeButton = document.querySelector(`.close`) as HTMLElement;
 const mobileMenuButton = document.querySelector(
   `.mobileMenuButton`
 ) as HTMLElement;
+const bioLink = document.querySelector(`.bio-link`) as HTMLElement;
 
 const swipeOverToggle = () => {
   if (siteNavHamburger && swipeOver && closeButton) {
@@ -45,3 +46,5 @@ closeButton.addEventListener(`click`, swipeOverToggle);
 mobileMenuButton
   ? mobileMenuButton.addEventListener(`click`, swipeOverToggle)
   : null;
+
+bioLink ? bioLink.addEventListener(`click`, swipeOverToggle) : null;
