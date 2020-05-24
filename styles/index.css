@@ -1,5 +1,3 @@
-@import url("/modules/hero/css/hero.css");
-
 .content {
   align-items: center;
   text-align: center;
@@ -14,26 +12,15 @@
   text-decoration: none;
 }
 
-.hero-linkButtons {
-  display: flex;
-}
-
-.hero-linkButtons {
-  margin-top: 3rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 600px;
-}
-
 .signOff {
   align-self: flex-end;
+  text-align: right;
 }
 
 .signOff-signature {
   font-style: italic;
 }
 
-/* from index2.css */
 .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -71,35 +58,25 @@
   margin-bottom: 15vh;
 }
 
-.heroWrapper-disabled {
-  transform: translateY(-100vh);
-}
-
 .heroWrapper-heroName {
-  margin: 0 0 1.5vw 0;
+  margin: 0 0 1.5vw;
   font-size: 7vw;
   text-align: center;
-  color: #222222;
+  color: #222;
   font-style: italic;
 }
 
 .heroWrapper-linkButtons > .heroWrapper-linkButton {
-  border: 0.125vw solid black;
+  border: 0.125vw solid #000;
   font-size: 1.25vw;
   border-radius: 0.25rem;
-  color: #222222;
+  color: #222;
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   padding: 1vw;
   margin: 0 1rem;
-}
-
-.heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
-  padding: 1.15vw;
-  background: #222222;
-  color: white;
 }
 
 .scrollDown {
@@ -123,21 +100,8 @@
   width: 4vw;
 }
 
-.hero-linkButtons,
-.signOff p {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 450;
-  letter-spacing: 0.2rem;
-  text-decoration: none;
-}
-
-.hero-linkButtons {
-  display: flex;
-}
-
 .hero {
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,30 +120,10 @@
   align-items: center;
 }
 
-.hero-linkButtons {
-  margin-top: 3rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 600px;
-}
-
-.content-body {
-  text-align: center;
-  margin-top: 0;
-}
-
-.signOff {
-  text-align: right;
-}
-
-.signOff-signature {
-  font-style: italic;
-}
-
 .videoWrapper {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
@@ -210,8 +154,8 @@
     font-size: 15vmin;
     text-align: center;
     width: 100%;
-    color: white;
-    text-shadow: 0.3vw 0.4vw 0.1vw #222222;
+    color: #fff;
+    text-shadow: 0.3vw 0.4vw 0.1vw #222;
     font-style: italic;
   }
 
@@ -223,23 +167,16 @@
 
   .heroWrapper-linkButtons > .heroWrapper-linkButton {
     padding: 2vw;
-    border: 0.125vw solid white;
+    border: 0.125vw solid #fff;
     margin-top: 2vh;
     border-radius: 0.25rem;
     background: hsla(0, 0%, 0%, 0.5);
-    color: white;
+    color: #fff;
     font-size: 3vw;
     white-space: nowrap;
     text-decoration: none;
     cursor: pointer;
     transition: 0.15s ease-in-out;
-  }
-
-  .heroWrapper-linkButtons > .heroWrapper-linkButton:hover {
-    color: hsla(0, 0%, 0%, 1);
-    background-color: hsla(0, 0%, 100%, 0.75);
-    border: 0.125vw solid black;
-    padding: 1.5vw;
   }
 
   .scrollDown {
@@ -249,28 +186,19 @@
   .scrollDown-invite {
     margin: 0;
     font-size: 4vmin;
-    color: white;
+    color: #fff;
     font-style: italic;
-    /* text-shadow: 0.2vw 0.4vw 0.3vw #222222; */
   }
 
   .scrollDown-arrowDown {
-    text-shadow: 0.2vw 0.4vw 0.3vw #222222;
-    stroke: white;
+    text-shadow: 0.2vw 0.4vw 0.3vw #222;
+    stroke: #fff;
     font-size: 4vmin;
   }
-}
-
-@media all and (max-width: 1000px) {
-  .hero h2 {
-    font-size: 3rem;
-  }
-}
-
-@media all and (max-width: 500px) {
   .bodyImage {
     width: 100%;
   }
+
   .hero-heroImage {
     width: 40%;
   }
