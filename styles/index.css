@@ -1,3 +1,7 @@
+.heroWrapper-disabled {
+  transform: translateY(-100vh);
+}
+
 .content {
   align-items: center;
   text-align: center;
@@ -19,12 +23,6 @@
 
 .signOff-signature {
   font-style: italic;
-}
-
-.contentWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .siteNav {
