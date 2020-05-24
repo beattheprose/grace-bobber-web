@@ -23,7 +23,4 @@ function scrollCallbackHandler() {
 
 window.addEventListener(`scroll`, scrollCallbackHandler);
 
-window.addEventListener(`click`, (e) => {
-  const video = document.querySelector(`.video`) as any;
-  video.muted ? (video.muted = false) : (video.muted = true);
-});
+
