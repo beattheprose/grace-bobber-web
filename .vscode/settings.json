@@ -17,5 +17,8 @@
     "javascript",
     "javascriptreact",
   ],
+  "cSpell.words": [
+    "minmax"
+  ],
   //end wes bos stuff
 }

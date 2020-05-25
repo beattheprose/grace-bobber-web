@@ -6,8 +6,12 @@ const modalImage = modal.querySelector(`.modal-content`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
 
 const handleImageClick = (e) => {
+  console.log(e.currentTarget.src);
+  const slug = e.currentTarget.src.split(`.`)[0];
+  const extension = e.currentTarget.src.split(`.`)[1];
+
   modal.style.display = `flex`;
-  modalImage.src = e.currentTarget.src;
+  modalImage.src = `${slug}-original.${extension}`;
   modalImage.alt = e.currentTarget.alt;
   modalCaption.innerText = e.currentTarget.alt;
 };
@@ -16,4 +20,4 @@ galleryList.forEach((image: HTMLImageElement) =>
   image.addEventListener(`click`, handleImageClick)
 );
 
-xButton.addEventListener(`click`, (e) => (modal.style.display = `none`));
+xButton.addEventListener(`click`, () => (modal.style.display = `none`));
