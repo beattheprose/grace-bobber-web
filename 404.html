@@ -46,134 +46,12 @@
     />
     <link rel="stylesheet" href="/dist/styles/base.css" />
     <link rel="stylesheet" href="/dist/styles/global.css" />
-    <link rel="stylesheet" href="/dist/styles/index.css" />
 
     <link rel="preload" href="/dist/scripts/menu.js" as="script" />
-    <link rel="preload" href="/dist/scripts/mute.js" as="script" />
-    <link rel="preload" href="/dist/scripts/videotrans.js" as="script" />
   </head>
 
   <body>
     <section class="contentWrapper">
-      <header class="videoWrapper">
-        <video
-          autoplay
-          loop
-          muted
-          playsinline
-          preload="auto"
-          poster="images/cabaret.jpg"
-          class="video"
-        >
-          <source
-            src="videos/Grace Bobber Performance Reel-MvuiZ23mONY.mp4"
-            type="video/webm"
-          />
-          <p>
-            Your browser doesn't support this embedded video :( Check out
-            Grace's
-            <a href="https://youtube.com/channel/UCrHRRBWgNyX_rMAJCMHqaUQ"
-              >Youtube channel</a
-            >
-            instead!
-          </p>
-        </video>
-        <button class="mutebutton" style="animation: shadow-pulse 1s infinite;">
-          <svg
-            class="mutebutton-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            height="40px"
-            width="40px"
-          >
-            <g
-              class="nc-icon-wrapper js-transition-icon"
-              data-effect="scale"
-              data-event="click"
-            >
-              <g class="js-transition-icon__state">
-                <title id="IconTitle">Mute</title>
-                <path d="M18 10L22 14M18 14L22 10"></path>
-                <path d="M13 5v14l-5-4H3V9h5z"></path>
-                <path stroke-linecap="round" d="M13 14c1.5-1 1.5-3 0-4"></path>
-              </g>
-              <g
-                class="js-transition-icon__state"
-                style="display: none;"
-                aria-hidden="true"
-              >
-                <title id="volumeLoudIconTitle">Volume Loud</title>
-                <path d="M13 5v14l-5-4H3V9h5z"></path>
-                <path stroke-linecap="round" d="M13 14c1.5-1 1.5-3 0-4"></path>
-                <path
-                  d="M16 16C18.0858253 13.9141747 18.0858253 10.0858253 16 8M18 19C21.98552 15.01448 22.0076803 9.00768033 18 5"
-                ></path>
-              </g>
-            </g>
-          </svg>
-        </button>
-        <button class="mobileMenuButton">
-          <svg
-            class="mobileMenuButton-icon"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            aria-labelledby="hamburgerIconTitle"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <title id="hamburgerIconTitle">Menu</title>
-            <path d="M6 7L18 7M6 12L18 12M6 17L18 17" />
-          </svg>
-        </button>
-
-        <div class="heroWrapper">
-          <section class="heroWrapper-textBlock">
-            <h3 class="heroWrapper-heroName">
-              Grace Bobber
-            </h3>
-            <section class="heroWrapper-linkButtons">
-              <a
-                href="/pages/headshotsresume/"
-                class="heroWrapper-linkButton small-caps"
-                >Headshot/Resume</a
-              >
-              <a
-                href="https://youtube.com/channel/UCrHRRBWgNyX_rMAJCMHqaUQ"
-                class="heroWrapper-linkButton small-caps"
-                >Youtube</a
-              >
-              <a
-                href="/pages/contact/"
-                class="heroWrapper-linkButton small-caps"
-                >Contact</a
-              >
-            </section>
-          </section>
-          <!-- Arrow Down -->
-          <footer class="scrollDown">
-            <p class="scrollDown-invite">
-              scroll for more
-            </p>
-            <svg
-              class="scrollDown-arrowDown"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              aria-labelledby="chevronDownIconTitle"
-              stroke-width="2.25"
-              stroke-linecap="round"
-              stroke-linejoin="miter"
-              fill="none"
-            >
-              <title id="chevronDownIconTitle">Chevron Down</title>
-              <polyline points="6 10 12 16 18 10" />
-            </svg>
-          </footer>
-        </div>
-      </header>
-
       <nav class="siteNav" id="bio">
         <a class="siteNav-siteTitle" href="/"><h3>Grace Bobber</h3></a>
         <ul class="menuList">
@@ -260,7 +138,18 @@
 
       <main class="content">
         <h2>404</h2>
-        <h4>Oops, we can't find that page right now</h4>
+        <h4>Oops, we can't find that page right now :(</h4>
+        <p>
+          Please check the menu on the upper right to navigate to your desired
+          page. If you have any kind of issue whatsoever you can reach out
+          <a href="/pages/contact/">here</a>.
+        </p>
+        <p class="small-caps" style="text-align: right; margin-bottom: 0">
+          Thank you so much for visiting,
+        </p>
+        <h4 style="font-style: italic; text-align: right">
+          grace
+        </h4>
       </main>
     </section>
 
@@ -291,7 +180,5 @@
     </footer>
 
     <script src="/dist/scripts/menu.js"></script>
-    <script src="/dist/scripts/mute.js"></script>
-    <script src="/dist/scripts/videotrans.js"></script>
   </body>
 </html>
