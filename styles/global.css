@@ -260,7 +260,7 @@ a {
 .blur-up {
   -webkit-filter: blur(5px);
   filter: blur(5px);
-  transition: filter 400ms, -webkit-filter 400ms;
+  transition: filter 200ms, -webkit-filter 200ms;
 }
 
 .blur-up.lazyloaded {
