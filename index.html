@@ -51,6 +51,7 @@
     <link rel="preload" href="/dist/scripts/menu.js" as="script" />
     <link rel="preload" href="/dist/scripts/mute.js" as="script" />
     <link rel="preload" href="/dist/scripts/videotrans.js" as="script" />
+    <script src="/dist/scripts/lazysizes.min.js"></script>
   </head>
 
   <body>
@@ -67,7 +68,7 @@
         >
           <source
             src="videos/Grace Bobber Performance Reel-MvuiZ23mONY.mp4"
-            type="video/webm"
+            type="video/mp4"
           />
           <p>
             Your browser doesn't support this embedded video :( Check out
@@ -284,8 +285,9 @@
           and people (too many family members to name).
         </p>
         <img
-          class="bodyImage"
-          src="./images/cabaret.jpg"
+          class="bodyImage lazyload"
+          src="/images/sunflower.png"
+          data-src="/images/cabaret.jpg"
           alt="Grace bobber as sally bowles in Cabaret"
         />
         <p>
