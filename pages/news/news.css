@@ -41,3 +41,36 @@ p {
 .card-subtitle {
   font-style: italic;
 }
+
+.articleNavButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nextArticle,
+.previousArticle {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.previousArticle {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.nextArticle-text,
+.previousArticle-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleNavButtons-arrow {
+  height: 10rem;
+}
+
+@media all and (max-width: 800px) {
+  .articleNavButtons {
+    flex-direction: column;
+  }
+}
