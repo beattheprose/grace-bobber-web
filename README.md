@@ -15,3 +15,4 @@ This is a secret repo for Grace's website ;)
 - [ ] Make sure every page has a title (esp after meta tag commit)
 - [ ] fix gallery image hack
 - [ ] Get grace's email as endpoint for the form
+- [ ] take away mute button if video can't load
