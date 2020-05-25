@@ -47,9 +47,3 @@
     height: unset;
   }
 }
-
-@media all and (min-width: 1500px) {
-  .content {
-    padding: 0 20rem;
-  }
-}
