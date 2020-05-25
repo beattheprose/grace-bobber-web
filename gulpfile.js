@@ -20,8 +20,32 @@ gulp.task(`imagemin`, function() {
         // jpg
         imageminMozjpeg({
           quality: 80,
+          progressive: true,
         }),
       ])
     )
     .pipe(gulp.dest(`dist/images/`));
+});
+
+gulp.task(`thumbnail`, function() {
+  return gulp
+    .src([`images/*.{png,jpg}`])
+    .pipe(
+      imagemin([
+        // png
+        imageminPngquant({
+          speed: 1,
+          quality: [0.1, 1], // lossy settings
+        }),
+        imageminZopfli({
+          more: true,
+        }),
+        // jpg
+        imageminMozjpeg({
+          quality: 10,
+          progressive: true,
+        }),
+      ])
+    )
+    .pipe(gulp.dest(`thumbnails/`));
 });
