@@ -51,7 +51,6 @@
     <link rel="preload" href="/dist/scripts/menu.js" as="script" />
     <link rel="preload" href="/dist/scripts/mute.js" as="script" />
     <link rel="preload" href="/dist/scripts/videotrans.js" as="script" />
-    <script src="/dist/scripts/lazysizes.min.js"></script>
   </head>
 
   <body>
@@ -262,8 +261,8 @@
       <main class="content">
         <header class="hero">
           <img
-            class="hero-heroImage"
-            src="/images/headshot.jpg"
+            class="hero-heroImage lazyload"
+            data-src="/images/headshot.jpg"
             alt="Grace Bobber's headshot"
           />
           <div class="hero-heroBody">
@@ -286,7 +285,6 @@
         </p>
         <img
           class="bodyImage lazyload"
-          src="/images/sunflower.png"
           data-src="/images/cabaret.jpg"
           alt="Grace bobber as sally bowles in Cabaret"
         />
@@ -343,5 +341,6 @@
     <script src="/dist/scripts/menu.js"></script>
     <script src="/dist/scripts/mute.js"></script>
     <script src="/dist/scripts/videotrans.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"></script>
   </body>
 </html>
