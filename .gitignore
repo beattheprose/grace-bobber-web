@@ -1,6 +1,3 @@
 node_modules
 *-original.jpg
 pages/news/posts/dist/*
-
-# Local Netlify folder
-.netlify
