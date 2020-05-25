@@ -35,6 +35,12 @@
   object-position: top;
 }
 
+@media all and (max-width: 1300px) {
+  .content {
+    margin: 0 5vw;
+  }
+}
+
 @media all and (max-width: 775px) {
   .twoCol {
     display: flex;
