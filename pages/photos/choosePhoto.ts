@@ -6,9 +6,8 @@ const modalImage = modal.querySelector(`.modal-content`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
 
 const handleImageClick = (e) => {
-  const origURL = e.currentTarget.src.split(`dist/`).join(``);
   modal.style.display = `flex`;
-  modalImage.src = origURL;
+  modalImage.src = e.currentTarget.src;
   modalImage.alt = e.currentTarget.alt;
   modalCaption.innerText = e.currentTarget.alt;
 };

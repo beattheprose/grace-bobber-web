@@ -16,3 +16,4 @@ This is a secret repo for Grace's website ;)
 - [ ] fix gallery image hack
 - [ ] Get grace's email as endpoint for the form
 - [ ] take away mute button if video can't load
+- [ ] blur headshot until loaded using lazySizes
