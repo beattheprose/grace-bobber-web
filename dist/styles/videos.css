@@ -1,2 +1,2 @@
-.vidGallery{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:2rem;gap:2rem}.content{display:flex;flex-flow:column;align-items:center}.vidGallery-video{width:100%;height:auto}.title{margin-bottom:4rem}
+.content{margin:0 5vw}.vidGallery{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:2rem;gap:2rem}.vidGallery-vidItem{position:relative;padding-bottom:56.25%;padding-top:25px;height:0}.vidGallery-video{position:absolute;top:0;left:0;width:100%;height:100%}.title,.youTube{align-self:center}.title{margin-bottom:4rem}.youTube{margin-top:2rem}@media (max-width:500px){.vidGallery{display:flex;flex-flow:column nowrap}.vidGallery-vidItem{margin-bottom:2rem}}
 /*# sourceMappingURL=videos.css.map */

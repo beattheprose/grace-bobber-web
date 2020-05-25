@@ -1,19 +1,49 @@
+.content {
+  margin: 0 5vw;
+  /* align-items: center; */
+}
+
 .vidGallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
-.content {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+.vidGallery-vidItem {
+  /* doing a hack to make sure that they display properly */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 25px;
+  height: 0;
 }
 
 .vidGallery-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
+
+.youTube,
+.title {
+  align-self: center;
+}
+
 .title {
   margin-bottom: 4rem;
+}
+
+.youTube {
+  margin-top: 2rem;
+}
+
+@media all and (max-width: 500px) {
+  .vidGallery {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .vidGallery-vidItem {
+    margin-bottom: 2rem;
+  }
 }
