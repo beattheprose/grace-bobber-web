@@ -44,11 +44,14 @@ p {
 
 .articleNavButtons {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .nextArticle,
 .previousArticle {
+  cursor: pointer;
+  border-bottom: none;
   margin: 2rem;
   display: flex;
   align-items: center;
@@ -63,6 +66,16 @@ p {
 .previousArticle-text {
   display: flex;
   flex-direction: column;
+}
+
+.nextArticle-text span,
+.previousArticle-text span {
+  font-size: 1.25rem;
+}
+
+.nextArticle-text h4,
+.previousArticle-text h4 {
+  margin: 0.5rem 0;
 }
 
 .articleNavButtons-arrow {
