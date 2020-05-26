@@ -22,4 +22,5 @@ This is a secret repo for Grace's website ;)
 
 1. Get video
 2. Make sure subject is centered using keyframes if need be
-3. Convert to webm using vp9 encoder
+3. Convert to webm using vp9 encoder and a small mp4
+4. Further compress webm using ffmpeg. I used `ffmpeg -i splash-video.webm -c:v libvpx-vp9 -b:v 500k -minrate 300k -maxrate 1000k -crf 10 -c:a libvorbis output2.webm`
