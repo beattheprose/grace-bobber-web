@@ -17,3 +17,9 @@ This is a secret repo for Grace's website ;)
 - [ ] Get grace's email as endpoint for the form
 - [ ] take away mute button if video can't load
 - [ ] blur headshot until loaded using lazySizes
+
+## Video Procedure
+
+1. Get video
+2. Make sure subject is centered using keyframes if need be
+3. Convert to webm using vp9 encoder
