@@ -1,4 +1,4 @@
-// sticky, but not annoying nav
+// sticky, but not annoying nav using headroom.js
 import Headroom from "headroom.js";
 const siteNav = document.querySelector(`nav`) as HTMLElement;
 const videoWrapper = document.querySelector(`.videoWrapper`) as HTMLElement;
@@ -29,6 +29,7 @@ swipeOverDropDown.forEach((dropDown: HTMLElement) => {
 const siteNavHamburger = document.querySelector(
   `.siteNav-hamburger`
 ) as HTMLElement;
+const siteNavHamburgerPath = document.querySelector(`.siteNav-hamburger path`);
 const closeButton = document.querySelector(`.close`) as HTMLElement;
 const mobileMenuButton = document.querySelector(
   `.mobileMenuButton`
@@ -41,10 +42,12 @@ const swipeOverToggle = () => {
   }
 };
 
-siteNavHamburger.addEventListener(`click`, swipeOverToggle);
-closeButton.addEventListener(`click`, swipeOverToggle);
-mobileMenuButton
-  ? mobileMenuButton.addEventListener(`click`, swipeOverToggle)
-  : null;
-
-bioLink ? bioLink.addEventListener(`click`, swipeOverToggle) : null;
+document.addEventListener(`click`, (e) =>
+  e.target === siteNavHamburger ||
+  e.target === siteNavHamburgerPath ||
+  e.target === closeButton ||
+  e.target === bioLink ||
+  e.target === mobileMenuButton
+    ? swipeOverToggle()
+    : null
+);
