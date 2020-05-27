@@ -4,19 +4,18 @@ This is a secret repo for Grace's website ;)
 
 ## TODO
 
-- [ ] Clean the css extensively
 - [ ] Think of a better way to handle news posts
-- [ ] Further modularize CSS
 - [x] Make the footer work properly
 - [x] Hook up contact form somehow
 - [x] Generate all content
 - [x] Find way to host audio
-- [ ] Find way to interact with the instagram API? [LONG-TERM GOAL]
+- [ ] Find way to interact with the instagram API?
 - [ ] Make sure every page has a title (esp after meta tag commit)
-- [ ] fix gallery image hack
+- [x] fix gallery image hack
 - [ ] Get grace's email as endpoint for the form
 - [ ] take away mute button if video can't load
-- [ ] blur headshot until loaded using lazySizes
+
+> Cool note to self: !A && !B === A || B. I'm sure this was in a math textbook somewhere and I forgot it, but it's nice to remember for the future!
 
 ## Video Procedure
 

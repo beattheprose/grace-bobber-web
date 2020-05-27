@@ -9,59 +9,33 @@ videoWrapper
 var headroom = new Headroom(siteNav, options);
 headroom.init();
 
-// activate submenus on swipeOver
-const swipeOver = document.querySelector(`.swipeOver`);
-const swipeOverDropDown = document.querySelectorAll(`.swipeOver-dropdown`);
+const handleSwipeOver = (e) => {
+  const navHamburger: boolean =
+    e.target.matches(`.siteNav-hamburger`) ||
+    e.target.parentElement.matches(`.siteNav-hamburger`);
+  const splashHamburger: boolean =
+    e.target.matches(`.mobileMenuButton`) ||
+    e.target.matches(`.mobileMenuButton-icon`) ||
+    e.target.parentElement.matches(`.mobileMenuButton-icon`);
+  const bioLink: boolean = e.target.matches(`.bio-link`);
+  const closeButton: boolean = e.target.matches(`.close`);
 
-// make the hamburger menu open the swipeOver
-const siteNavHamburger = document.querySelector(
-  `.siteNav-hamburger`
-) as HTMLElement;
-const siteNavHamburgerPath = document.querySelector(`.siteNav-hamburger path`);
-const closeButton = document.querySelector(`.close`) as HTMLElement;
-const mobileMenuButton = document.querySelector(
-  `.mobileMenuButton`
-) as HTMLElement;
-const bioLink = document.querySelector(`.bio-link`) as HTMLElement;
-
-const swipeOverToggle = () => {
-  if (siteNavHamburger && swipeOver && closeButton) {
+  if (navHamburger || bioLink || closeButton || splashHamburger) {
+    const swipeOver = document.querySelector(`.swipeOver`);
     swipeOver.classList.toggle(`swipeOver-isOpen`);
   }
 };
 
-const swipeOverList = document.querySelector(`.swipeOver-linkList`);
-
-document.addEventListener(`click`, (e: any) => {
-  // listen for clicks on all the menu buttons
-  e.target === siteNavHamburger ||
-  e.target === siteNavHamburgerPath ||
-  e.target === closeButton ||
-  e.target === bioLink ||
-  e.target === mobileMenuButton
-    ? swipeOverToggle()
-    : null;
-
-  console.log(e.target);
-});
-
-const handleSiteNavHamburger = (e) => {
-  let isHamburger: boolean =
-    e.target.matches(`.siteNav-hamburger`) ||
-    e.target.parentElement.matches(`.siteNav-hamburger`);
-  if (isHamburger) {
-    console.log(`clicked sitenav hamburger dudee`);
-  } else return;
-};
-
 const handleSwipeOverDropdown = (e) => {
+  const swipeOverDropDowns = document.querySelectorAll(`.swipeOver-dropdown`);
+
   // make sure it has a nextElementSibling
   if (e.target.nextElementSibling) {
     // delegate event
     if (!e.target.nextElementSibling.matches(`.swipeOver-dropdown`)) return;
     //execute code
     e.preventDefault();
-    swipeOverDropDown.forEach((element) =>
+    swipeOverDropDowns.forEach((element) =>
       element.classList.remove(`swipeOver-dropdown-isOpen`)
     );
     e.target.nextElementSibling.classList.add(`swipeOver-dropdown-isOpen`);
@@ -69,6 +43,6 @@ const handleSwipeOverDropdown = (e) => {
 };
 
 document.addEventListener(`click`, (e) => {
-  handleSiteNavHamburger(e);
+  handleSwipeOver(e);
   handleSwipeOverDropdown(e);
 });
