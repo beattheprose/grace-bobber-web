@@ -10,6 +10,7 @@ var headroom = new Headroom(siteNav, options);
 headroom.init();
 
 // activate submenus on swipeOver
+const swipeOver = document.querySelector(`.swipeOver`);
 const swipeOverDropDown = document.querySelectorAll(`.swipeOver-dropdown`);
 
 // make the hamburger menu open the swipeOver
@@ -45,11 +46,12 @@ document.addEventListener(`click`, (e: any) => {
 });
 
 const handleSiteNavHamburger = (e) => {
-  const isHamburger: boolean =
-    e.target.matches(`.siteNav-hamburger`) &&
+  let isHamburger: boolean =
+    e.target.matches(`.siteNav-hamburger`) ||
     e.target.parentElement.matches(`.siteNav-hamburger`);
-  if (!isHamburger) return;
-  console.log(`fuck you`);
+  if (isHamburger) {
+    console.log(`clicked sitenav hamburger dudee`);
+  } else return;
 };
 
 const handleSwipeOverDropdown = (e) => {
