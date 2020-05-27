@@ -9,6 +9,7 @@ videoWrapper
 var headroom = new Headroom(siteNav, options);
 headroom.init();
 
+// activate the swipeover actions
 const handleSwipeOver = (e) => {
   const navHamburger: boolean =
     e.target.matches(`.siteNav-hamburger`) ||

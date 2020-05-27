@@ -1,19 +1,23 @@
-const galleryList = document.querySelectorAll(`.gallery-image`);
-const bigImage = document.querySelector(`.big-image`) as HTMLImageElement;
 const modal = document.querySelector(`.modal`) as HTMLElement;
-const xButton = modal.querySelector(`.closeButton`) as HTMLElement;
 const modalImage = modal.querySelector(`.modal-content`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
 
-const handleImageClick = (e) => {
+const handlePhotoSelect = (e) => {
+  if (!e.target.matches(`img`)) return;
+
   modal.style.display = `flex`;
-  modalImage.src = e.currentTarget.src;
-  modalImage.alt = e.currentTarget.alt;
-  modalCaption.innerText = e.currentTarget.alt;
+  modalImage.src = e.target.src;
+  modalImage.alt = e.target.alt;
+  modalCaption.innerText = e.target.alt;
 };
 
-galleryList.forEach((image: HTMLImageElement) =>
-  image.addEventListener(`click`, handleImageClick)
-);
+const handleCloseButton = (e) => {
+  if (!e.target.matches(`.closeButton`)) return;
 
-xButton.addEventListener(`click`, () => (modal.style.display = `none`));
+  modal.style.display = `none`;
+};
+
+document.addEventListener(`click`, (e) => {
+  handlePhotoSelect(e);
+  handleCloseButton(e);
+});
