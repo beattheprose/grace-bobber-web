@@ -223,7 +223,7 @@ a {
   color: white;
   text-align: center;
   margin-top: 3rem;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 1rem 2rem;
 }
 
 .footer-links {
@@ -236,6 +236,26 @@ a {
 .footer span {
   padding: 0 0.5rem;
   color: #ececec;
+}
+
+.footer-byline {
+  font-size: 1.5rem;
+  color: #ececec95;
+  margin: 0;
+  margin-top: 4rem;
+}
+
+.footer-byline a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+span.heart {
+  color: #ececec95;
+}
+
+.footer-github {
+  fill: #ececec95;
+  width: 15px;
 }
 
 /* GLOBAL COMPONENTS */
