@@ -99,6 +99,7 @@ a {
   padding: 2rem 4rem;
   top: 0;
   background: white;
+  z-index: 5;
 }
 
 .siteNav.headroom {
