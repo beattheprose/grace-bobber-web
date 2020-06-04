@@ -90,6 +90,20 @@ a {
   border-bottom: 1px solid rgba(34, 34, 34, 0.3);
 }
 
+blockquote {
+  margin: 0 2rem 0 1rem;
+  border-radius: 5px;
+  font-style: italic;
+  padding: 1rem 1.2rem;
+  background-color: #ececec;
+  border-left: 0.5rem solid #222222;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 1rem;
+}
+
 /* NAV */
 .siteNav {
   position: sticky;

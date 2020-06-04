@@ -18,13 +18,13 @@
   text-align: center;
 }
 
-.instaHandle {
-  font-weight: bold;
-}
-
 .left {
   display: flex;
   flex-direction: column;
+}
+
+.instaHandle {
+  font-weight: bold;
 }
 
 .band-image {
