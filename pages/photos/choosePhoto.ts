@@ -1,50 +1,37 @@
 const modal = document.querySelector(`.modal`) as HTMLElement;
 const modalImage = modal.querySelector(`.modal-image`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
-let prevArrowElement;
-let nextArrowElement;
+let currentImage;
 
-const handlePhotoSelect = (e) => {
-  if (!e.target.matches(`img`)) return;
-
-  modal.style.display = `flex`;
-
-  // let imgSrc
-  // let imgAlt
-  // if (prevArrowElement || nextArrowElement) {
-  //   imgSrc = prevArrowElement
-  // }
-
-  modalImage.src = e.target.src;
-  modalImage.alt = e.target.alt;
-  modalCaption.innerText = e.target.alt;
-  // export the values of the previous and next images
-  prevArrowElement = e.target.previousElementSibling;
-  nextArrowElement = e.target.nextElementSibling;
+const openModal = () => (modal.style.display = `flex`);
+const closeModal = () => (modal.style.display = `none`);
+const showImage = (imageEl) => {
+  modalImage.src = imageEl.src;
+  modalImage.alt = imageEl.alt;
+  modalCaption.innerText = imageEl.alt;
+  currentImage = imageEl;
+  openModal();
 };
+const showNextImage = () => showImage(currentImage.nextElementSibling);
+const showPreviousImage = () => showImage(currentImage.previousElementSibling);
 
 // TODO: hide the first and last arrows using the hidden attribute
-// if arrow elements are defined, show that
-// if arrow elements are not defined, show e.target.src
-// on all close actions, set arrow elements back to undefined
+const handlePhotoClick = (e) =>
+  e.target.matches(`img`) ? showImage(e.target) : null;
 
 const handleArrows = (e) => {
   if (
     e.target.matches(`.modal-arrow-previous`) ||
     e.target.matches(`.modal-arrow-previous polyline`)
   ) {
-    modalImage.src = prevArrowElement.src;
-    modalImage.alt = prevArrowElement.alt;
-    modalCaption.innerText = prevArrowElement.alt;
+    showPreviousImage();
   }
 
   if (
     e.target.matches(`.modal-arrow-next`) ||
     e.target.matches(`.modal-arrow-next polyline`)
   ) {
-    modalImage.src = nextArrowElement.src;
-    modalImage.alt = nextArrowElement.alt;
-    modalCaption.innerText = nextArrowElement.alt;
+    showNextImage();
   }
 };
 
@@ -53,26 +40,10 @@ const handleCloseButton = (e) => {
   closeModal();
 };
 
-const handleKeys = (e) => {
-  prevArrowElement || nextArrowElement
-    ? console.log(`present`)
-    : console.log(`null`);
-};
-
-const closeModal = () => {
-  modal.style.display = `none`;
-  prevArrowElement = null;
-  nextArrowElement = null;
-};
-
 document.addEventListener(`click`, (e) => {
-  handlePhotoSelect(e);
+  handlePhotoClick(e);
   handleArrows(e);
   handleCloseButton(e);
-});
-
-document.addEventListener(`keydown`, (e) => {
-  handleKeys(e);
 });
 
 // make ts play nice with the polyfill
