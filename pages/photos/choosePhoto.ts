@@ -6,6 +6,8 @@ const previousArrow = modal.querySelector(
 ) as HTMLElement;
 const nextArrow = modal.querySelector(`.modal-arrow-next`) as HTMLElement;
 let currentImage: HTMLImageElement;
+let touchstartX: number = 0;
+let touchendX: number = 0;
 
 const openModal = () => modal.classList.add(`modal-open`);
 const closeModal = () => modal.classList.remove(`modal-open`);
@@ -17,12 +19,12 @@ const showImage = (imageEl) => {
 
   currentImage = imageEl;
   if (!currentImage.previousElementSibling) {
-    previousArrow.style.opacity = `0`;
+    previousArrow.classList.add(`modal-arrow-hidden`);
   } else if (!currentImage.nextElementSibling) {
-    nextArrow.style.opacity = `0`;
+    nextArrow.classList.add(`modal-arrow-hidden`);
   } else {
-    previousArrow.style.opacity = `1`;
-    nextArrow.style.opacity = `1`;
+    previousArrow.classList.remove(`modal-arrow-hidden`);
+    nextArrow.classList.remove(`modal-arrow-hidden`);
   }
 };
 const showNextImage = () => {
@@ -34,7 +36,6 @@ const showPreviousImage = () => {
     showImage(currentImage.previousElementSibling);
 };
 
-// TODO: hide the first and last arrows using the hidden attribute
 const handlePhotoClick = ({ target }) => {
   if (target.matches(`.gallery-image`)) showImage(target);
 };
@@ -76,11 +77,37 @@ const handleKeys = ({ key }) => {
     }
 };
 
+const handleSwipes = () => {
+  if (touchendX < touchstartX) {
+    showNextImage();
+  }
+  if (touchendX > touchstartX) {
+    showPreviousImage();
+  }
+};
+
 document.addEventListener(`click`, (e) => {
   handlePhotoClick(e);
   handleArrowClick(e);
   handleCloseClick(e);
   handleClickOutside(e);
 });
-
 document.addEventListener(`keyup`, (e) => handleKeys(e));
+document.addEventListener(
+  "touchstart",
+  (e: TouchEvent) => {
+    if (modal.classList.contains(`modal-open`))
+      touchstartX = e.changedTouches[0].screenX;
+  },
+  false
+);
+document.addEventListener(
+  "touchend",
+  (e: TouchEvent) => {
+    if (modal.classList.contains(`modal-open`)) {
+      touchendX = e.changedTouches[0].screenX;
+      handleSwipes();
+    }
+  },
+  false
+);
