@@ -56,7 +56,11 @@ const handleCloseClick = (e) => {
 };
 const handleClickOutside = (e) => {
   if (modal.classList.contains(`modal-open`)) {
-    if (e.target === modal) closeModal();
+    if (
+      e.target === modal ||
+      e.target === document.querySelector(`.modal-content`)
+    )
+      closeModal();
   }
 };
 

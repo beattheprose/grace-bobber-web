@@ -67,13 +67,22 @@
 }
 
 .modal-image {
-  object-fit: contain;
+  max-height: 80%;
+  max-width: 700px;
+  object-fit: scale-down;
 }
 
 .modal-arrow-previous,
 .modal-arrow-next {
   cursor: pointer;
-  width: 10vw;
+  width: 20vw;
+}
+.modal-arrow-previous {
+  padding: 2vw 4vw 2vw 0;
+}
+
+.modal-arrow-next {
+  padding: 2vw 0 2vw 4vw;
 }
 
 .modal-arrow-hidden {
@@ -85,7 +94,7 @@
   max-width: 700px;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
+  padding-top: 10px;
   font-style: italic;
 }
 
