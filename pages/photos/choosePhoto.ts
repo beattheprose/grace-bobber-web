@@ -1,8 +1,11 @@
 const modal = document.querySelector(`.modal`) as HTMLElement;
 const modalImage = modal.querySelector(`.modal-image`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
-const modalIsOpen = modal.classList.contains(`modal-open`);
-let currentImage;
+const previousArrow = modal.querySelector(
+  `.modal-arrow-previous`
+) as HTMLElement;
+const nextArrow = modal.querySelector(`.modal-arrow-next`) as HTMLElement;
+let currentImage: HTMLImageElement;
 
 const openModal = () => modal.classList.add(`modal-open`);
 const closeModal = () => modal.classList.remove(`modal-open`);
@@ -10,15 +13,31 @@ const showImage = (imageEl) => {
   modalImage.src = imageEl.src;
   modalImage.alt = imageEl.alt;
   modalCaption.innerText = imageEl.alt;
-  currentImage = imageEl;
   openModal();
+
+  currentImage = imageEl;
+  if (!currentImage.previousElementSibling) {
+    previousArrow.style.opacity = `0`;
+  } else if (!currentImage.nextElementSibling) {
+    nextArrow.style.opacity = `0`;
+  } else {
+    previousArrow.style.opacity = `1`;
+    nextArrow.style.opacity = `1`;
+  }
 };
-const showNextImage = () => showImage(currentImage.nextElementSibling);
-const showPreviousImage = () => showImage(currentImage.previousElementSibling);
+const showNextImage = () => {
+  if (currentImage.nextElementSibling)
+    showImage(currentImage.nextElementSibling);
+};
+const showPreviousImage = () => {
+  if (currentImage.previousElementSibling)
+    showImage(currentImage.previousElementSibling);
+};
 
 // TODO: hide the first and last arrows using the hidden attribute
-const handlePhotoClick = (e) =>
-  e.target.matches(`.gallery-image`) ? showImage(e.target) : null;
+const handlePhotoClick = ({ target }) => {
+  if (target.matches(`.gallery-image`)) showImage(target);
+};
 const handleArrowClick = (e) => {
   const isPrev: boolean =
     e.target.matches(`.modal-arrow-previous`) ||
@@ -35,13 +54,13 @@ const handleCloseClick = (e) => {
   closeModal();
 };
 const handleClickOutside = (e) => {
-  if (modalIsOpen) {
+  if (modal.classList.contains(`modal-open`)) {
     if (e.target === modal) closeModal();
   }
 };
 
 const handleKeys = ({ key }) => {
-  if (modalIsOpen)
+  if (modal.classList.contains(`modal-open`))
     switch (key) {
       default:
         break;
@@ -64,4 +83,4 @@ document.addEventListener(`click`, (e) => {
   handleClickOutside(e);
 });
 
-document.addEventListener(`keydown`, (e) => handleKeys(e));
+document.addEventListener(`keyup`, (e) => handleKeys(e));
