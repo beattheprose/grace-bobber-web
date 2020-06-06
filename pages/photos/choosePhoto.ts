@@ -1,6 +1,7 @@
 const modal = document.querySelector(`.modal`) as HTMLElement;
 const modalImage = modal.querySelector(`.modal-image`) as HTMLImageElement;
 const modalCaption = modal.querySelector(`.caption`) as HTMLElement;
+const modalIsOpen = modal.classList.contains(`modal-open`);
 let currentImage;
 
 const openModal = () => modal.classList.add(`modal-open`);
@@ -34,9 +35,26 @@ const handleCloseClick = (e) => {
   closeModal();
 };
 const handleClickOutside = (e) => {
-  if (modal.classList.contains(`modal-open`)) {
-    e.target === modal ? closeModal() : null;
+  if (modalIsOpen) {
+    if (e.target === modal) closeModal();
   }
+};
+
+const handleKeys = ({ key }) => {
+  if (modalIsOpen)
+    switch (key) {
+      default:
+        break;
+      case `Escape`:
+        closeModal();
+        break;
+      case `ArrowLeft`:
+        showPreviousImage();
+        break;
+      case `ArrowRight`:
+        showNextImage();
+        break;
+    }
 };
 
 document.addEventListener(`click`, (e) => {
@@ -45,3 +63,5 @@ document.addEventListener(`click`, (e) => {
   handleCloseClick(e);
   handleClickOutside(e);
 });
+
+document.addEventListener(`keydown`, (e) => handleKeys(e));

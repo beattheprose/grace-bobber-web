@@ -86,10 +86,9 @@
 }
 
 /* Add Animation - Zoom in the Modal */
-.modal-content,
-.caption {
+.modal {
   animation-name: zoom;
-  animation-duration: 0.6s;
+  animation-duration: 0.2s;
   transform-origin: top center;
 }
 
