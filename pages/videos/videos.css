@@ -1,12 +1,12 @@
 .content {
   margin: 0 5vw;
-  /* align-items: center; */
 }
 
 .vidGallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .vidGallery-vidItem {
@@ -25,17 +25,12 @@
   height: 100%;
 }
 
-.youTube,
 .title {
   align-self: center;
 }
 
 .title {
   margin-bottom: 4rem;
-}
-
-.youTube {
-  margin-top: 2rem;
 }
 
 @media all and (max-width: 500px) {
