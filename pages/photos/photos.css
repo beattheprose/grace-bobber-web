@@ -33,9 +33,9 @@
   transform: scale(1.05);
 }
 
-.modal,
 .modal-content {
   display: flex;
+  margin: auto;
 }
 
 .modal {
@@ -76,17 +76,21 @@
 .modal-arrow-next {
   cursor: pointer;
   width: 100px;
+  position: absolute;
+  z-index: 2;
 }
 .modal-arrow-previous {
   padding: 20px 40px 20px 0;
 }
 
 .modal-arrow-next {
+  right: 0;
   padding: 20px 0 20px 40px;
 }
 
 .modal-arrow-hidden {
   opacity: 0;
+  cursor: initial;
 }
 
 .caption {
@@ -140,7 +144,7 @@
 
   .modal-arrow-next,
   .modal-arrow-previous {
-    display: none;
+    bottom: 0;
   }
 }
 
