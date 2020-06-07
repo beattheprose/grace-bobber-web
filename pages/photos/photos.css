@@ -146,6 +146,10 @@
   .modal-arrow-previous {
     bottom: 0;
   }
+
+  .title {
+    font-size: 13vw;
+  }
 }
 
 .swipeOver {
