@@ -12,7 +12,7 @@ let touchendX: number = 0;
 const openModal = () => modal.classList.add(`modal-open`);
 const closeModal = () => modal.classList.remove(`modal-open`);
 const showImage = (imageEl) => {
-  modalImage.src = imageEl.src;
+  modalImage.src = imageEl.dataset.src;
   modalImage.alt = imageEl.alt;
   modalCaption.innerText = imageEl.alt;
   openModal();
