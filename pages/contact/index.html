@@ -166,7 +166,8 @@
         <form
           action="https://api.staticforms.xyz/submit"
           method="post"
-          class="normform contact-form"
+          class="normform contactForm"
+          id="contact-form"
         >
           <fieldset>
             <legend>Drop me a line!</legend>
@@ -216,14 +217,26 @@
             ></textarea>
           </fieldset>
           <input type="hidden" name="replyTo" value="@" />
-          <input type="hidden" name="redirectTo" value="/" />
+          <input type="hidden" name="redirectTo" value="#" />
           <!--Spam Protection-->
           <input type="text" name="honeypot" style="display: none;" />
           <div class="inline-buttons">
             <input type="reset" value="Reset" />
-            <input type="submit" value="Send" />
+            <input type="submit" value="Send" class="sendButton" />
           </div>
         </form>
+
+        <div class="formModal">
+          <img
+            src="/thumbnails/headshot.jpg"
+            data-src="/dist/images/headshot.jpg"
+            alt="Grace Bobber Headshot"
+            class="lazyload blur-up"
+          />
+          <h3>Thank you!</h3>
+          <p>I'll get back to you as soon as I can.</p>
+          <span class="formModal-close">&times;</span>
+        </div>
       </main>
     </section>
 
@@ -271,5 +284,7 @@
       ></a>
     </footer>
     <script src="/dist/scripts/menu.js"></script>
+    <script src="/dist/scripts/formSubmit.js"></script>
+    <script src="/dist/scripts/lazysizes.min.js"></script>
   </body>
 </html>

@@ -34,3 +34,25 @@
   width: 100%;
   align-self: center;
 }
+
+.formModal {
+  position: fixed;
+  background: purple;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formModal img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.formModal-close {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  font-size: 4rem;
+  font-weight: bold;
+}
