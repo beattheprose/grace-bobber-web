@@ -1,15 +1,15 @@
 const sendButton = document.querySelector(`.sendButton`) as HTMLElement;
 const contactForm = document.querySelector(`form`) as HTMLFormElement;
+const formModal = document.querySelector(`formModal`) as HTMLElement;
 
 const handleSubmit = () => {
-  contactForm.preventDefault;
   console.log(`works!`);
 };
 
 const handleCloseButton = (e) => {
   if (!e.target.matches(`.formModal-close`)) return;
 
-  console.log(`clicked!`);
+  formModal.classList.remove(`formModal-open`);
 };
 
 document.addEventListener(`click`, (e) => {
