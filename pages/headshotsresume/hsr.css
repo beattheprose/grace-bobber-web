@@ -1,17 +1,27 @@
-@import url("/modules/hero/css/hero.css");
-
 .title {
   text-align: center;
   margin-top: unset;
-  margin-bottom: 4rem;
 }
 
 .hero {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 3rem;
+  grid-template-rows: max-content;
 }
 
 .hero-column {
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-column-image {
+  min-height: 65%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 3rem;
 }
 
 .resumeForm {
@@ -25,6 +35,10 @@ hr {
   color: #222222;
   margin: 4rem 10%;
   background-color: #222222;
+}
+
+.button {
+  margin: unset;
 }
 
 @media all and (max-width: 750px) {
