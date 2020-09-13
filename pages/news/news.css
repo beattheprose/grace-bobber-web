@@ -87,3 +87,10 @@ p {
     flex-direction: column;
   }
 }
+
+/* * SPECIFIC EXCEPTION FOR JULIUS CAESAR IMAGE */
+@media all and (min-width: 800px) {
+  #julius {
+    object-position: 22% 0%;
+  }
+}
