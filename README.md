@@ -17,3 +17,10 @@
 
 - set the `data-src` attribute to point to /dist/images and `src` to point to the thumbnail
 - add lazyload and blur-up
+
+## Getting gulp working again
+
+1. `rm -r node_modules`
+2. `npm install`
+3. `npm install imagemin imagemin-pngquant imagemin-zopfli imagemin-mozjpeg`
+4. Profit!
