@@ -1,0 +1,4 @@
+# Netlify redirects
+# left is what the browser requests, right is what is served
+# https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+/music      /pages/music-subpage
