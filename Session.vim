@@ -8,15 +8,15 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +121 pages/news/index.html
-badd +118 pages/news/death-and-taxes.html
+badd +120 pages/news/death-and-taxes.html
 badd +123 pages/news/juliuscaesar.html
 badd +151 pages/news/beautifulcityproject.html
 badd +94 pages/news/news.css
-badd +0 pages/headshotsresume/index.html
+badd +178 pages/headshotsresume/index.html
 argglobal
 %argdel
 $argadd ./
-edit pages/headshotsresume/index.html
+edit pages/news/index.html
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -33,18 +33,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-4,41fold
-45,82fold
-83,113fold
-44,162fold
-44
-normal! zo
-let s:l = 178 - ((28 * winheight(0) + 20) / 41)
+let s:l = 126 - ((25 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-178
-normal! 071|
+126
+normal! 067|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
