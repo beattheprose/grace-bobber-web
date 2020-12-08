@@ -90,6 +90,9 @@ p {
 
 /* * SPECIFIC EXCEPTION FOR JULIUS CAESAR IMAGE */
 @media all and (min-width: 800px) {
+  #death {
+    object-position: 0% 16%;
+  }
   #julius {
     object-position: 22% 0%;
   }

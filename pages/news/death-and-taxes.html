@@ -5,8 +5,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 	<!-- Primary Meta Tags -->
-	<title>Grace Bobber</title>
-	<meta name="title" content="Grace Bobber" />
+	<title>Julius Caesar @ Evergreen | Grace Bobber</title>
+	<meta name="title" content="Julius Caesar @ Evergreen | Grace Bobber" />
 	<meta name="description"
 		content="Grace Bobber is an actor, musician, and dancer living in Chicago. She graduated from Northwestern University and is represented by Shirley Hamilton Talent." />
 
@@ -29,6 +29,7 @@
 
 	<link rel="preload" href="/dist/styles/base.css" as="style" />
 	<link rel="preload" href="/dist/styles/global.css" as="style" />
+	<link rel="preload" href="/pages/news/news.css" as="style" />
 
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 	<link
@@ -36,7 +37,7 @@
 		rel="stylesheet" />
 	<link rel="stylesheet" href="/dist/styles/base.css" />
 	<link rel="stylesheet" href="/dist/styles/global.css" />
-	<link rel="stylesheet" href="/pages/headshotsresume/hsr.css" />
+	<link rel="stylesheet" href="/pages/news/news.css" />
 	<link rel="preload" href="/dist/scripts/menu.js" as="script" />
 </head>
 
@@ -113,52 +114,29 @@
 		</div>
 
 		<main class="content">
-			<h1 class="title">Headshots and Resume</h1>
-
-			<article class="hero">
-				<section class="hero-column">
-					<img
-              src="/thumbnails/Grace_Bobber_Headshot_1-min.jpg"
-              data-src="/dist/images/Grace_Bobber_Headshot_1.jpg"
-              alt="Grace Bobber's headshot"
-              class="hero-column-image lazyload blur-up"
-            />
-					<form method="get" action="/images/Grace_Bobber_Headshot_1.jpg">
-						<button type="submit" class="button">Download</button>
-					</form>
-				</section>
-				<section class="hero-column">
-					<img
-              src="/thumbnails/Grace_Bobber_Headshot_2-min.jpg"
-              data-src="/dist/images/Grace_Bobber_Headshot_2.jpg"
-              alt="Grace Bobber's headshot"
-              class="hero-column-image lazyload blur-up"
-            />
-					<form method="get" action="/images/Grace_Bobber_Headshot_2.jpg">
-						<button type="submit" class="button">Download</button>
-					</form>
-				</section>
-				<section class="hero-column">
-					<img
-              src="/thumbnails/Grace_Bobber_Headshot_3-min.jpg"
-              data-src="/dist/images/Grace_Bobber_Headshot_3.jpg"
-              alt="Grace Bobber's headshot"
-              class="hero-column-image lazyload blur-up"
-            />
-					<form method="get" action="/images/Grace_Bobber_Headshot_3.jpg">
-						<button type="submit" class="button">Download</button>
-					</form>
-				</section>
-			</article>
-
-			<hr />
-
-			<form method="get" action="/images/Grace-Bobber-Resume.pdf" class="resumeForm">
-				<button type="submit" class="button resume-button">
-            Download Resume
-          </button>
-			</form>
+			<h2>Death & Taxes @ HARP Theatricals</h2>
+			<h5 id="2020-12-07"><em>December 7, 2020</em></h5>
+			<img src="/dist/images/death-and-taxes.jpg" alt="Death and Taxes, in orange, is emblazoned over a picture of a knife about to cut a block of cheese" />
+			<p>I'm excited to be a part of the internet premiere of "Death & Taxes", performing the role of Ivy! Check out this 20-minute presentation on <a href="https://www.youtube.com/channel/UCNGG6u45jOj7mQ7yHuR4mxw">HARP Theatricals' Youtube page</a> on Thursday, December 17th. The company will donate all proceeds to <a href="https://beanartshero.com">Be An #ArtsHero</a>.</p>
 		</main>
+		<footer class="articleNavButtons">
+			<a href="#" class="nextArticle">
+				<!-- intentionally left blank to preserve spacing -->
+			</a>
+			<a href="./juliuscaesar.html" class="previousArticle">
+				<section class="previousArticle-text">
+					<span class="small-caps">Previous</span>
+					<h4>Julius Caesar @ Evergreen Theatre Collective</h4>
+					<span class="small-caps">September 13, 2020</span>
+				</section>
+				<svg class="articleNavButtons-arrow" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+					aria-labelledby="chevronRightIconTitle" stroke="#222222" stroke-width="0.6666666666666666"
+					stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#222222">
+					<title id="chevronRightIconTitle">Chevron Right</title>
+					<polyline points="10 6 16 12 10 18 10 18" />
+				</svg>
+			</a>
+		</footer>
 	</section>
 
 	<footer class="footer">
@@ -185,7 +163,6 @@
 			</svg></a>
 	</footer>
 	<script src="/dist/scripts/menu.js"></script>
-	<script src="/dist/scripts/lazysizes.min.js"></script>
 </body>
 
 </html>
