@@ -18,6 +18,10 @@
 - set the `data-src` attribute to point to /dist/images and `src` to point to the thumbnail
 - add lazyload and blur-up
 
+## PDF Resume procedure
+
+Make sure to change the `Title` in the metadata to `Grace Bobber Resume`. I used `exiftool` for this one time.
+
 ## Getting gulp working again
 
 1. `rm -r node_modules`
