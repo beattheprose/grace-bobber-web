@@ -2,3 +2,5 @@ node_modules
 *-original.jpg
 pages/news/posts/dist/*
 splash-video-project
+.direnv/
+.envrc
