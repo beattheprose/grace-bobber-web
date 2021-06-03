@@ -27,10 +27,17 @@
 
 .title {
   align-self: center;
+  margin-bottom: 4rem;
 }
 
-.title {
-  margin-bottom: 4rem;
+.banner-video-item {
+  grid-column: 1 / span 2;
+  padding-bottom: 28.125%;
+}
+
+.banner-video-video {
+  width:50%;
+  left: 25%;
 }
 
 @media all and (max-width: 500px) {
@@ -40,5 +47,13 @@
   }
   .vidGallery-vidItem {
     margin-bottom: 2rem;
+  }
+  .banner-video-video {
+    width: 100%;
+    left: 0;
+  }
+  .banner-video-item {
+    grid-column: unset;
+    padding-bottom: 56.25%
   }
 }
